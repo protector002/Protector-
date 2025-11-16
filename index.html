@@ -339,6 +339,7 @@
             position: relative;
             opacity: 0;
             transform: translateY(30px);
+            cursor: pointer;
         }
 
         .portfolio-item.visible {
@@ -520,6 +521,203 @@
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.4);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-content:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .faq-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: var(--light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Process Section */
+        .process {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(255,255,255,0.3);
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .process-step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .step-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
         /* Contact Section */
@@ -734,6 +932,127 @@
             }
         }
 
+        /* New Elements */
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Sticky Get Quote Button */
+        .sticky-quote {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .sticky-quote.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Portfolio Modal */
+        .portfolio-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .portfolio-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 20px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             h1 {
@@ -755,6 +1074,15 @@
             .about-text h2:after {
                 left: 50%;
                 transform: translateX(-50%);
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .process-steps:before {
+                display: none;
             }
         }
 
@@ -791,6 +1119,11 @@
             .hero p {
                 font-size: 1.1rem;
             }
+
+            .sticky-quote {
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
 
         @media (max-width: 576px) {
@@ -806,7 +1139,7 @@
                 font-size: 1.8rem;
             }
             
-            .portfolio-grid, .services-grid {
+            .portfolio-grid, .services-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -859,6 +1192,9 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -893,7 +1229,7 @@
                 <button class="filter-btn" data-filter="print">Print</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item visible" data-category="branding">
+                <div class="portfolio-item visible" data-category="branding" data-modal="1">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
                         <span style="z-index: 2; position: relative;">Brand Identity</span>
                     </div>
@@ -902,7 +1238,7 @@
                         <p>Complete brand identity for an eco-friendly products company.</p>
                     </div>
                 </div>
-                <div class="portfolio-item visible" data-category="web">
+                <div class="portfolio-item visible" data-category="web" data-modal="2">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80')">
                         <span style="z-index: 2; position: relative;">Web Design</span>
                     </div>
@@ -911,7 +1247,7 @@
                         <p>Modern responsive website for a technology consulting firm.</p>
                     </div>
                 </div>
-                <div class="portfolio-item visible" data-category="print">
+                <div class="portfolio-item visible" data-category="print" data-modal="3">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1583947215259-38e31be8751f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')">
                         <span style="z-index: 2; position: relative;">Print Design</span>
                     </div>
@@ -920,7 +1256,7 @@
                         <p>Vibrant poster series for a multicultural food festival.</p>
                     </div>
                 </div>
-                <div class="portfolio-item visible" data-category="branding">
+                <div class="portfolio-item visible" data-category="branding" data-modal="4">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
                         <span style="z-index: 2; position: relative;">Logo Design</span>
                     </div>
@@ -929,7 +1265,7 @@
                         <p>Modern logo design for a contemporary fashion brand.</p>
                     </div>
                 </div>
-                <div class="portfolio-item visible" data-category="web">
+                <div class="portfolio-item visible" data-category="web" data-modal="5">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80')">
                         <span style="z-index: 2; position: relative;">UI/UX Design</span>
                     </div>
@@ -938,7 +1274,7 @@
                         <p>User-friendly interface for a personal finance mobile application.</p>
                     </div>
                 </div>
-                <div class="portfolio-item visible" data-category="print">
+                <div class="portfolio-item visible" data-category="print" data-modal="6">
                     <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
                         <span style="z-index: 2; position: relative;">Packaging</span>
                     </div>
@@ -1053,6 +1389,142 @@
                 <div class="about-image">
                     <div class="about-img">
                         <span style="z-index: 2; position: relative;">Our Creative Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>PROTECTOR Designs transformed our brand identity completely. Their attention to detail and understanding of our vision was exceptional. We've seen a 40% increase in brand recognition since working with them.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John D. Mutebi</h4>
+                            <p>CEO, Kampala Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>The team at PROTECTOR Designs delivered beyond our expectations. They captured the essence of our restaurant and created a visual identity that truly represents our brand. Our customers love the new look!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SN</div>
+                        <div class="author-info">
+                            <h4>Sarah N. Kato</h4>
+                            <p>Owner, Taste of Uganda Restaurant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Working with PROTECTOR Designs was a game-changer for our business. Their creative approach to our packaging design helped us stand out in a competitive market. Sales increased by 25% after the redesign.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MN</div>
+                        <div class="author-info">
+                            <h4>Michael N. Ssebaggala</h4>
+                            <p>Founder, Ugandan Coffee Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2>Our Design Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>We begin by understanding your business, goals, and target audience to create a solid foundation.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Strategy</h3>
+                        <p>We develop a comprehensive design strategy that aligns with your business objectives.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Design</h3>
+                        <p>Our creative team brings your vision to life with innovative and impactful designs.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Delivery</h3>
+                        <p>We deliver final designs and provide support to ensure successful implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a typical design project take?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline depends on the scope and complexity of the project. A basic logo design might take 1-2 weeks, while a comprehensive brand identity could take 4-6 weeks. We provide a detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your pricing structure?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer both project-based pricing and retainer options depending on your needs. Our projects typically range from $500 for basic designs to $5,000+ for comprehensive brand systems. We provide detailed quotes after understanding your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you work with international clients?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! While we're based in Kampala, Uganda, we work with clients worldwide. We're experienced in remote collaboration and use various tools to ensure seamless communication regardless of location.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What file formats will I receive?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide all final designs in multiple formats suitable for both print and digital use. This typically includes AI, EPS, PDF, JPG, PNG, and SVG files. We also provide guidelines on how to use each file type.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer revisions?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we include a specific number of revision rounds in our proposals to ensure you're completely satisfied with the final result. The exact number depends on the project scope and is detailed in our agreement.</p>
                     </div>
                 </div>
             </div>
@@ -1183,6 +1655,32 @@
         </div>
     </footer>
 
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal" id="portfolio-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Project Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image" id="modal-image"></div>
+                <div id="modal-description">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Sticky Get Quote Button -->
+    <div class="sticky-quote" id="stickyQuote">
+        <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
@@ -1206,6 +1704,22 @@
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
+            }
+
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+
+            // Show/hide sticky quote button
+            const stickyQuote = document.getElementById('stickyQuote');
+            if (window.scrollY > 300) {
+                stickyQuote.classList.add('visible');
+            } else {
+                stickyQuote.classList.remove('visible');
             }
         });
         
@@ -1240,7 +1754,7 @@
         
         // Animate elements on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.service-card, .about-image, .portfolio-item');
+            const elements = document.querySelectorAll('.service-card, .about-image, .portfolio-item, .testimonial-card, .faq-item, .process-step');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1311,6 +1825,109 @@
             e.preventDefault();
             alert('Thank you for subscribing to our newsletter!');
             this.reset();
+        });
+
+        // Back to top functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    a.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Portfolio Modal
+        const portfolioModal = document.getElementById('portfolio-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const modalDescription = document.getElementById('modal-description');
+        const modalClose = document.querySelector('.modal-close');
+
+        // Project data for modals
+        const projectData = {
+            1: {
+                title: "EcoLife Branding",
+                image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "<p>We developed a complete brand identity for EcoLife, an eco-friendly products company based in Kampala. The project included logo design, color palette, typography, and brand guidelines.</p><p>The client wanted a visual identity that communicated sustainability while maintaining a modern and approachable aesthetic. We delivered a system that works across both digital and print media.</p><p><strong>Services:</strong> Logo Design, Brand Identity, Print Design</p>"
+            },
+            2: {
+                title: "TechSolutions Website",
+                image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80",
+                description: "<p>We designed and developed a responsive website for TechSolutions, a technology consulting firm. The project focused on creating a user-friendly interface that showcases their services and expertise.</p><p>The design emphasizes clarity and professionalism while incorporating interactive elements to engage visitors. The website has helped increase their lead generation by 35%.</p><p><strong>Services:</strong> Web Design, UI/UX Design, Development</p>"
+            },
+            3: {
+                title: "Food Festival Posters",
+                image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+                description: "<p>We created a vibrant poster series for the annual Kampala Food Festival. The designs needed to appeal to a diverse audience while representing the multicultural nature of the event.</p><p>Using bold colors and dynamic typography, we developed a visual system that worked across various sizes and formats. The posters were displayed throughout the city and contributed to a 20% increase in attendance.</p><p><strong>Services:</strong> Print Design, Illustration, Typography</p>"
+            },
+            4: {
+                title: "Nova Apparel Logo",
+                image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "<p>We designed a modern logo for Nova Apparel, a contemporary fashion brand targeting young professionals. The client wanted a mark that felt both sophisticated and approachable.</p><p>The final design incorporates clean lines and a subtle nod to fashion elements. It works effectively across various applications from clothing tags to digital platforms.</p><p><strong>Services:</strong> Logo Design, Brand Identity</p>"
+            },
+            5: {
+                title: "Finance App Interface",
+                image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
+                description: "<p>We designed a user-friendly interface for a personal finance mobile application. The challenge was to create an intuitive experience for managing complex financial data.</p><p>Our solution focused on clear information hierarchy, intuitive navigation, and visual elements that make financial information accessible. The design has received positive feedback for its clarity and ease of use.</p><p><strong>Services:</strong> UI/UX Design, Mobile App Design</p>"
+            },
+            6: {
+                title: "Artisan Coffee Packaging",
+                image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "<p>We developed eco-friendly packaging for Artisan Coffee, a specialty coffee brand. The packaging needed to reflect the premium quality of the product while maintaining sustainability.</p><p>Using recycled materials and minimalist design, we created packaging that stands out on shelves while communicating the brand's commitment to quality and environmental responsibility. The redesign contributed to a 15% increase in sales.</p><p><strong>Services:</strong> Packaging Design, Brand Identity, Print Design</p>"
+            }
+        };
+
+        // Open modal when portfolio item is clicked
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const projectId = item.getAttribute('data-modal');
+                const project = projectData[projectId];
+                
+                if (project) {
+                    modalTitle.textContent = project.title;
+                    modalImage.style.backgroundImage = `url('${project.image}')`;
+                    modalDescription.innerHTML = project.description;
+                    portfolioModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            });
+        });
+
+        // Close modal
+        modalClose.addEventListener('click', () => {
+            portfolioModal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+
+        // Close modal when clicking outside content
+        portfolioModal.addEventListener('click', (e) => {
+            if (e.target === portfolioModal) {
+                portfolioModal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
         });
     </script>
 </body>
