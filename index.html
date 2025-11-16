@@ -207,7 +207,7 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(42,75,124,0.9) 0%, rgba(26,26,46,0.9) 100%), url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(42,75,124,0.9) 0%, rgba(26,26,46,0.9) 100%), url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
             color: white;
             text-align: center;
             position: relative;
@@ -354,13 +354,30 @@
         .portfolio-img {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 1.5rem;
             font-weight: 700;
+            position: relative;
+        }
+
+        .portfolio-img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img:after {
+            background: rgba(0,0,0,0.1);
         }
 
         .portfolio-content {
@@ -485,13 +502,24 @@
         .about-img {
             width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 1.5rem;
             font-weight: 700;
+            position: relative;
+        }
+
+        .about-img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
         }
 
         /* Contact Section */
@@ -866,42 +894,54 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item visible" data-category="branding">
-                    <div class="portfolio-img">Brand Identity</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                        <span style="z-index: 2; position: relative;">Brand Identity</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>EcoLife Branding</h3>
                         <p>Complete brand identity for an eco-friendly products company.</p>
                     </div>
                 </div>
                 <div class="portfolio-item visible" data-category="web">
-                    <div class="portfolio-img">Web Design</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80')">
+                        <span style="z-index: 2; position: relative;">Web Design</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>TechSolutions Website</h3>
                         <p>Modern responsive website for a technology consulting firm.</p>
                     </div>
                 </div>
                 <div class="portfolio-item visible" data-category="print">
-                    <div class="portfolio-img">Print Design</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1583947215259-38e31be8751f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')">
+                        <span style="z-index: 2; position: relative;">Print Design</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>Food Festival Posters</h3>
                         <p>Vibrant poster series for a multicultural food festival.</p>
                     </div>
                 </div>
                 <div class="portfolio-item visible" data-category="branding">
-                    <div class="portfolio-img">Logo Design</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                        <span style="z-index: 2; position: relative;">Logo Design</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>Nova Apparel Logo</h3>
                         <p>Modern logo design for a contemporary fashion brand.</p>
                     </div>
                 </div>
                 <div class="portfolio-item visible" data-category="web">
-                    <div class="portfolio-img">UI/UX Design</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80')">
+                        <span style="z-index: 2; position: relative;">UI/UX Design</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>Finance App Interface</h3>
                         <p>User-friendly interface for a personal finance mobile application.</p>
                     </div>
                 </div>
                 <div class="portfolio-item visible" data-category="print">
-                    <div class="portfolio-img">Packaging</div>
+                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                        <span style="z-index: 2; position: relative;">Packaging</span>
+                    </div>
                     <div class="portfolio-content">
                         <h3>Artisan Coffee Packaging</h3>
                         <p>Eco-friendly packaging design for specialty coffee beans.</p>
@@ -1011,7 +1051,9 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="about-img">Our Team</div>
+                    <div class="about-img">
+                        <span style="z-index: 2; position: relative;">Our Creative Team</span>
+                    </div>
                 </div>
             </div>
         </div>
