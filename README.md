@@ -1,2 +1,0 @@
-# Protector-
-Graphics designing
