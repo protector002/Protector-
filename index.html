@@ -1680,12 +1680,368 @@
         .whatsapp-link i {
             margin-right: 8px;
         }
+
+        /* Christmas Tree Styles */
+        .christmas-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            cursor: pointer;
+            animation: float-tree 6s ease-in-out infinite;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .tree {
+            position: relative;
+            width: 120px;
+            height: 160px;
+            margin: 0 auto 10px;
+        }
+
+        .tree-layer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50% 50% 0 0;
+            background: linear-gradient(to bottom, #0a5f0a, #1e7c1e, #0a5f0a);
+            box-shadow: 
+                inset 0 0 10px rgba(0,0,0,0.3),
+                0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .tree-layer-1 {
+            width: 100px;
+            height: 60px;
+            top: 80px;
+            z-index: 1;
+            animation: layer-sway 4s ease-in-out infinite;
+        }
+
+        .tree-layer-2 {
+            width: 80px;
+            height: 50px;
+            top: 50px;
+            z-index: 2;
+            animation: layer-sway 3.5s ease-in-out infinite;
+        }
+
+        .tree-layer-3 {
+            width: 60px;
+            height: 40px;
+            top: 25px;
+            z-index: 3;
+            animation: layer-sway 3s ease-in-out infinite;
+        }
+
+        .tree-layer-4 {
+            width: 40px;
+            height: 30px;
+            top: 10px;
+            z-index: 4;
+            animation: layer-sway 2.5s ease-in-out infinite;
+        }
+
+        .tree-trunk {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(to right, #5d4037, #8d6e63, #5d4037);
+            border-radius: 5px 5px 0 0;
+            z-index: 0;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .tree-star {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            background: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: star-twinkle 2s infinite alternate;
+            z-index: 5;
+            box-shadow: 0 0 10px gold;
+        }
+
+        /* Ornaments */
+        .ornament {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            animation: ornament-twinkle 3s infinite alternate;
+        }
+
+        .ornament-1 {
+            top: 90px;
+            left: 30px;
+            background: radial-gradient(circle at 30% 30%, #ff5252, #b71c1c);
+            animation-delay: 0s;
+        }
+
+        .ornament-2 {
+            top: 110px;
+            left: 70px;
+            background: radial-gradient(circle at 30% 30%, #2196f3, #0d47a1);
+            animation-delay: 0.5s;
+        }
+
+        .ornament-3 {
+            top: 60px;
+            left: 50px;
+            background: radial-gradient(circle at 30% 30%, #ffeb3b, #f57f17);
+            animation-delay: 1s;
+        }
+
+        .ornament-4 {
+            top: 80px;
+            left: 80px;
+            background: radial-gradient(circle at 30% 30%, #e91e63, #880e4f);
+            animation-delay: 1.5s;
+        }
+
+        .ornament-5 {
+            top: 40px;
+            left: 40px;
+            background: radial-gradient(circle at 30% 30%, #9c27b0, #4a148c);
+            animation-delay: 2s;
+        }
+
+        .ornament-6 {
+            top: 50px;
+            left: 70px;
+            background: radial-gradient(circle at 30% 30%, #4caf50, #1b5e20);
+            animation-delay: 2.5s;
+        }
+
+        /* Christmas Lights */
+        .light {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            z-index: 6;
+            animation: light-pulse 2s infinite alternate;
+        }
+
+        .light-1 {
+            top: 100px;
+            left: 25px;
+            background: #ff1744;
+            box-shadow: 0 0 8px #ff1744;
+            animation-delay: 0s;
+        }
+
+        .light-2 {
+            top: 70px;
+            left: 85px;
+            background: #2979ff;
+            box-shadow: 0 0 8px #2979ff;
+            animation-delay: 0.3s;
+        }
+
+        .light-3 {
+            top: 50px;
+            left: 60px;
+            background: #00e676;
+            box-shadow: 0 0 8px #00e676;
+            animation-delay: 0.6s;
+        }
+
+        .light-4 {
+            top: 35px;
+            left: 35px;
+            background: #ff9100;
+            box-shadow: 0 0 8px #ff9100;
+            animation-delay: 0.9s;
+        }
+
+        .light-5 {
+            top: 120px;
+            left: 60px;
+            background: #e040fb;
+            box-shadow: 0 0 8px #e040fb;
+            animation-delay: 1.2s;
+        }
+
+        .merry-christmas {
+            font-size: 16px;
+            font-weight: bold;
+            color: #c62828;
+            text-align: center;
+            margin-top: 10px;
+            animation: text-bounce 3s infinite;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #c62828, #ff8a65);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Animations */
+        @keyframes layer-sway {
+            0%, 100% { transform: translateX(-50%) rotate(0deg); }
+            25% { transform: translateX(-50%) rotate(-1.5deg); }
+            75% { transform: translateX(-50%) rotate(1.5deg); }
+        }
+
+        @keyframes star-twinkle {
+            0% { opacity: 0.7; transform: translateX(-50%) scale(1) rotate(0deg); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1.1) rotate(5deg); box-shadow: 0 0 15px gold, 0 0 25px orange; }
+        }
+
+        @keyframes ornament-twinkle {
+            0% { transform: scale(1); box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+            100% { transform: scale(1.2); box-shadow: 0 0 10px rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.4); }
+        }
+
+        @keyframes light-pulse {
+            0% { opacity: 0.6; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.3); }
+        }
+
+        @keyframes text-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
+        }
+
+        @keyframes float-tree {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Snow effect */
+        .snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 7;
+        }
+
+        .snowflake {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-10px) rotate(0deg); }
+            100% { transform: translateY(180px) rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .christmas-container {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .tree {
+                width: 90px;
+                height: 120px;
+            }
+            
+            .tree-layer-1 {
+                width: 75px;
+                height: 45px;
+                top: 60px;
+            }
+            
+            .tree-layer-2 {
+                width: 60px;
+                height: 37px;
+                top: 37px;
+            }
+            
+            .tree-layer-3 {
+                width: 45px;
+                height: 30px;
+                top: 18px;
+            }
+            
+            .tree-layer-4 {
+                width: 30px;
+                height: 22px;
+                top: 7px;
+            }
+            
+            .tree-trunk {
+                top: 105px;
+                width: 15px;
+                height: 22px;
+            }
+            
+            .tree-star {
+                width: 18px;
+                height: 18px;
+                top: -8px;
+            }
+            
+            .ornament, .light {
+                width: 7px;
+                height: 7px;
+            }
+            
+            .merry-christmas {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
+    </div>
+
+    <!-- Christmas Tree -->
+    <div class="christmas-container" id="christmasContainer">
+        <div class="tree">
+            <div class="tree-star"></div>
+            <div class="tree-layer tree-layer-1"></div>
+            <div class="tree-layer tree-layer-2"></div>
+            <div class="tree-layer tree-layer-3"></div>
+            <div class="tree-layer tree-layer-4"></div>
+            <div class="tree-trunk"></div>
+            
+            <!-- Ornaments -->
+            <div class="ornament ornament-1"></div>
+            <div class="ornament ornament-2"></div>
+            <div class="ornament ornament-3"></div>
+            <div class="ornament ornament-4"></div>
+            <div class="ornament ornament-5"></div>
+            <div class="ornament ornament-6"></div>
+            
+            <!-- Lights -->
+            <div class="light light-1"></div>
+            <div class="light light-2"></div>
+            <div class="light light-3"></div>
+            <div class="light light-4"></div>
+            <div class="light light-5"></div>
+            
+            <!-- Snow -->
+            <div class="snow" id="snowContainer"></div>
+        </div>
+        <div class="merry-christmas">Merry Christmas!</div>
     </div>
 
     <!-- Custom Cursor -->
@@ -2058,6 +2414,39 @@
                 preloader.classList.add('fade-out');
             }, 1000);
         });
+
+        // Christmas tree toggle
+        document.getElementById('christmasContainer').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+
+        // Create snowflakes
+        function createSnowflakes() {
+            const snowContainer = document.getElementById('snowContainer');
+            const snowflakeCount = 20;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                
+                // Random properties for each snowflake
+                const size = Math.random() * 4 + 2;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 5 + 5;
+                const animationDelay = Math.random() * 5;
+                
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${left}%`;
+                snowflake.style.animationDuration = `${animationDuration}s`;
+                snowflake.style.animationDelay = `${animationDelay}s`;
+                
+                snowContainer.appendChild(snowflake);
+            }
+        }
+
+        // Initialize snow when page loads
+        createSnowflakes();
 
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
