@@ -550,6 +550,424 @@
             color: var(--text-light);
         }
 
+        /* Live Projects Section */
+        .live-projects {
+            background-color: var(--light-gray);
+        }
+
+        body.dark-mode .live-projects {
+            background-color: var(--darker);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        body.dark-mode .project-card {
+            background: var(--light);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image::after {
+            background: rgba(0,0,0,0.1);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .project-link i {
+            margin-right: 8px;
+        }
+
+        .project-link.secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        body.dark-mode .project-link.secondary {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .project-link.secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* User Journey Steps */
+        .user-journey {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .journey-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 20px;
+            max-width: 150px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            background-color: var(--light);
+        }
+
+        body.dark-mode .feedback-section {
+            background-color: var(--light);
+        }
+
+        .feedback-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feedback-form {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .feedback-form {
+            background: var(--light);
+        }
+
+        .feedback-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--light);
+            color: var(--text);
+        }
+
+        body.dark-mode .form-control {
+            background: var(--light);
+            border-color: var(--border-light);
+            color: var(--text);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 75, 124, 0.2);
+        }
+
+        body.dark-mode .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(90, 227, 207, 0.2);
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .feedback-display {
+            margin-top: 40px;
+        }
+
+        .feedback-display h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+
+        .feedback-item {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        body.dark-mode .feedback-item {
+            background: var(--light);
+        }
+
+        .feedback-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .feedback-project {
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(42, 75, 124, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        body.dark-mode .feedback-project {
+            color: var(--accent);
+            background: rgba(90, 227, 207, 0.1);
+        }
+
+        .feedback-author {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .feedback-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .feedback-content {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .no-feedback {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Fixed Rating Styles */
+        .rating {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .star {
+            color: #ddd;
+            font-size: 1.5rem;
+            margin-right: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        .star:hover {
+            transform: scale(1.2);
+        }
+
+        .star.filled {
+            color: #FFC107;
+        }
+
+        .rating-hint {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .required-star {
+            color: #e74c3c;
+        }
+
+        /* Success/Error Messages */
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        body.dark-mode .alert-success {
+            background: #0f5132;
+            color: #d1e7dd;
+            border-color: #0f5132;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        body.dark-mode .alert-error {
+            background: #842029;
+            color: #f8d7da;
+            border-color: #842029;
+        }
+
+        /* Visit Prompt */
+        .visit-prompt {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .visit-prompt a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .visit-prompt a:hover {
+            color: var(--accent);
+        }
+
         /* Services Section */
         .services {
             background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
@@ -1515,173 +1933,6 @@
             transition: all 0.1s ease-out;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .about-content, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-text h2 {
-                text-align: center;
-            }
-            
-            .about-text h2:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .process-steps {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .process-steps:before {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                background: var(--light);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                transition: var(--transition);
-                border-top: 1px solid var(--border-light);
-            }
-
-            body.dark-mode .nav-links {
-                background: var(--light);
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .typewriter {
-                white-space: normal;
-                border-right: none;
-                animation: none;
-                display: block;
-            }
-
-            .sticky-quote {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-
-        @media (max-width: 576px) {
-            section {
-                padding: 70px 0;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .portfolio-grid, .services-grid, .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .typewriter {
-                white-space: normal;
-                border-right: none;
-                animation: none;
-            }
-        }
-        
-        /* Success message */
-        .success-message {
-            display: none;
-            background: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .whatsapp-link {
-            display: inline-flex;
-            align-items: center;
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: var(--transition);
-        }
-        
-        .whatsapp-link:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-        }
-        
-        .whatsapp-link i {
-            margin-right: 8px;
-        }
-
         /* Christmas Tree Styles */
         .christmas-container {
             position: fixed;
@@ -1950,7 +2201,105 @@
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-text h2 {
+                text-align: center;
+            }
+            
+            .about-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .process-steps:before {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: var(--light);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transition: var(--transition);
+                border-top: 1px solid var(--border-light);
+            }
+
+            body.dark-mode .nav-links {
+                background: var(--light);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .typewriter {
+                white-space: normal;
+                border-right: none;
+                animation: none;
+                display: block;
+            }
+
+            .sticky-quote {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
             .christmas-container {
                 top: 10px;
                 right: 10px;
@@ -2006,6 +2355,72 @@
                 font-size: 14px;
             }
         }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .portfolio-grid, .services-grid, .testimonials-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .typewriter {
+                white-space: normal;
+                border-right: none;
+                animation: none;
+            }
+        }
+        
+        /* Success message */
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-link:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .whatsapp-link i {
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
@@ -2060,6 +2475,7 @@
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#live-projects">Live Projects</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
@@ -2140,6 +2556,147 @@
                 </div>
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="After Design">
                 <div class="slider-handle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Live Projects Section -->
+    <section class="live-projects" id="live-projects">
+        <div class="container">
+            <h2>Live Projects I've Worked On</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Explore the professional platforms I've contributed to. Visit each website to see my work in action, then share your feedback below.</p>
+            
+            <div class="user-journey">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Click to visit the live projects</div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Explore and review how they work</div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Return here to share your feedback</div>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-badge">Live Project</div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="project-content">
+                        <h3>PosterMyWall</h3>
+                        <p>An online design platform where users can create custom posters, flyers, and social media graphics with ease.</p>
+                        <div class="project-links">
+                            <a href="https://postermywall.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>Visit Website
+                            </a>
+                            <a href="#feedback" class="project-link secondary" onclick="setProject('PosterMyWall')">
+                                <i class="fas fa-comment"></i>Leave Feedback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-badge">Live Project</div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="project-content">
+                        <h3>W3Schools</h3>
+                        <p>The world's largest web developer site, providing tutorials, references, and examples for web technologies.</p>
+                        <div class="project-links">
+                            <a href="https://www.w3schools.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>Visit Website
+                            </a>
+                            <a href="#feedback" class="project-link secondary" onclick="setProject('W3Schools')">
+                                <i class="fas fa-comment"></i>Leave Feedback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-badge">Live Project</div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="project-content">
+                        <h3>Weather.com</h3>
+                        <p>A comprehensive weather service providing forecasts, radar maps, and severe weather alerts worldwide.</p>
+                        <div class="project-links">
+                            <a href="https://weather.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>Visit Website
+                            </a>
+                            <a href="#feedback" class="project-link secondary" onclick="setProject('Weather.com')">
+                                <i class="fas fa-comment"></i>Leave Feedback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Feedback Section -->
+    <section class="feedback-section" id="feedback">
+        <div class="container">
+            <h2>Share Your Feedback</h2>
+            
+            <div class="visit-prompt">
+                <p><i class="fas fa-info-circle"></i> <strong>Important:</strong> Please visit the live projects above first to review how they work, then return here to share your experience!</p>
+            </div>
+            
+            <div class="feedback-container">
+                <div class="feedback-form">
+                    <h3>Tell Us What You Think</h3>
+                    <div id="feedbackAlert" class="alert"></div>
+                    <form id="feedbackForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="feedbackName">Your Name</label>
+                                <input type="text" class="form-control" id="feedbackName" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedbackProject">Which Project Did You Visit?</label>
+                                <select class="form-control" id="feedbackProject" required>
+                                    <option value="">Select a project you visited</option>
+                                    <option value="PosterMyWall">PosterMyWall</option>
+                                    <option value="W3Schools">W3Schools</option>
+                                    <option value="Weather.com">Weather.com</option>
+                                    <option value="Other">Other Project</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedbackMessage">Your Review & Feedback</label>
+                            <textarea class="form-control" id="feedbackMessage" placeholder="After visiting the website, share your thoughts on the design, functionality, user experience, and any suggestions..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Overall Rating <span class="required-star">*</span></label>
+                            <div class="rating" id="ratingStars">
+                                <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                                <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                                <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                                <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                                <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                            </div>
+                            <input type="hidden" id="feedbackRating" value="0" required>
+                            <span class="rating-hint">Click on the stars to rate (1 = Poor, 5 = Excellent)</span>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Submit Your Feedback
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="feedback-display">
+                    <h3>What Others Are Saying</h3>
+                    <div id="feedbackList">
+                        <!-- Feedback items will be dynamically added here -->
+                        <div class="no-feedback" id="noFeedback">
+                            No feedback yet. Be the first to share your experience after visiting the projects!
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2781,6 +3338,259 @@
                     cursorOutline.style.borderColor = 'var(--primary)';
                 }
             });
+        }
+        
+        // Fixed Feedback System
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load existing feedback from localStorage
+            loadFeedback();
+            
+            // Set up rating stars - SIMPLIFIED VERSION
+            setupRatingStars();
+            
+            // Handle feedback form submission
+            document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitFeedback();
+            });
+        });
+        
+        // Function to set project in feedback form when clicking "Leave Feedback" from project cards
+        function setProject(projectName) {
+            document.getElementById('feedbackProject').value = projectName;
+            // Smooth scroll to feedback section
+            document.getElementById('feedback').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // SIMPLIFIED rating stars setup - This should definitely work
+        function setupRatingStars() {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('feedbackRating');
+            
+            // Clear any existing event listeners by cloning and replacing
+            stars.forEach(star => {
+                const newStar = star.cloneNode(true);
+                star.parentNode.replaceChild(newStar, star);
+            });
+            
+            // Get the new stars after replacement
+            const newStars = document.querySelectorAll('.star');
+            
+            newStars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = this.getAttribute('data-value');
+                    console.log('Star clicked:', value); // Debug log
+                    ratingInput.value = value;
+                    
+                    // Update star display
+                    newStars.forEach((s, index) => {
+                        if (index < value) {
+                            s.innerHTML = '<i class="fas fa-star"></i>';
+                            s.classList.add('filled');
+                        } else {
+                            s.innerHTML = '<i class="far fa-star"></i>';
+                            s.classList.remove('filled');
+                        }
+                    });
+                    
+                    // Clear any error messages
+                    hideAlert();
+                });
+            });
+            
+            // Add hover effect to the rating container
+            document.getElementById('ratingStars').addEventListener('mouseover', function(e) {
+                if (e.target.classList.contains('star')) {
+                    const value = e.target.getAttribute('data-value');
+                    newStars.forEach((s, index) => {
+                        if (index < value) {
+                            s.innerHTML = '<i class="fas fa-star"></i>';
+                        } else {
+                            s.innerHTML = '<i class="far fa-star"></i>';
+                        }
+                    });
+                }
+            });
+            
+            // Reset stars when mouse leaves (unless a rating is selected)
+            document.getElementById('ratingStars').addEventListener('mouseleave', function() {
+                const currentRating = ratingInput.value;
+                newStars.forEach((s, index) => {
+                    if (index < currentRating) {
+                        s.innerHTML = '<i class="fas fa-star"></i>';
+                        s.classList.add('filled');
+                    } else {
+                        s.innerHTML = '<i class="far fa-star"></i>';
+                        s.classList.remove('filled');
+                    }
+                });
+            });
+        }
+        
+        // Fixed submit feedback function
+        function submitFeedback() {
+            const name = document.getElementById('feedbackName').value.trim();
+            const project = document.getElementById('feedbackProject').value;
+            const message = document.getElementById('feedbackMessage').value.trim();
+            const rating = document.getElementById('feedbackRating').value;
+            
+            console.log('Form values:', { name, project, message, rating }); // Debug log
+            
+            // Validate form
+            let errors = [];
+            
+            if (!name) {
+                errors.push('Please enter your name');
+            }
+            
+            if (!project) {
+                errors.push('Please select a project');
+            }
+            
+            if (!message) {
+                errors.push('Please enter your feedback message');
+            }
+            
+            if (rating === '0' || !rating) {
+                errors.push('Please provide a rating by clicking on the stars');
+            }
+            
+            if (errors.length > 0) {
+                showAlert(errors.join('<br>'), 'error');
+                return;
+            }
+            
+            // Create feedback object
+            const feedback = {
+                id: Date.now(), // Use timestamp as unique ID
+                name: name,
+                project: project,
+                message: message,
+                rating: parseInt(rating),
+                date: new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+            
+            // Save to localStorage
+            saveFeedback(feedback);
+            
+            // Add to display
+            displayFeedback(feedback);
+            
+            // Show success message
+            showAlert('Thank you for your feedback! It has been submitted successfully.', 'success');
+            
+            // Reset form
+            document.getElementById('feedbackForm').reset();
+            
+            // Reset stars
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.innerHTML = '<i class="far fa-star"></i>';
+                star.classList.remove('filled');
+            });
+            document.getElementById('feedbackRating').value = '0';
+        }
+        
+        // Save feedback to localStorage
+        function saveFeedback(feedback) {
+            let feedbacks = JSON.parse(localStorage.getItem('protectorFeedbacks')) || [];
+            feedbacks.push(feedback);
+            localStorage.setItem('protectorFeedbacks', JSON.stringify(feedbacks));
+        }
+        
+        // Load feedback from localStorage
+        function loadFeedback() {
+            const feedbacks = JSON.parse(localStorage.getItem('protectorFeedbacks')) || [];
+            const feedbackList = document.getElementById('feedbackList');
+            const noFeedback = document.getElementById('noFeedback');
+            
+            if (feedbacks.length > 0) {
+                noFeedback.style.display = 'none';
+                
+                // Sort by most recent first
+                feedbacks.sort((a, b) => b.id - a.id);
+                
+                // Clear existing feedback (except no feedback message)
+                const existingFeedback = feedbackList.querySelectorAll('.feedback-item');
+                existingFeedback.forEach(item => item.remove());
+                
+                // Display each feedback
+                feedbacks.forEach(feedback => {
+                    displayFeedback(feedback);
+                });
+            }
+        }
+        
+        // Display a feedback item
+        function displayFeedback(feedback) {
+            const feedbackList = document.getElementById('feedbackList');
+            const noFeedback = document.getElementById('noFeedback');
+            
+            // Hide "no feedback" message if this is the first one
+            if (noFeedback.style.display !== 'none') {
+                noFeedback.style.display = 'none';
+            }
+            
+            // Create feedback element
+            const feedbackItem = document.createElement('div');
+            feedbackItem.className = 'feedback-item';
+            feedbackItem.innerHTML = `
+                <div class="feedback-header">
+                    <div>
+                        <div class="feedback-author">${feedback.name}</div>
+                        <div class="feedback-date">${feedback.date}</div>
+                    </div>
+                    <div class="feedback-project">${feedback.project}</div>
+                </div>
+                <div class="rating">
+                    ${generateStarRating(feedback.rating)}
+                </div>
+                <div class="feedback-content">${feedback.message}</div>
+            `;
+            
+            // Add to the beginning of the list (most recent first)
+            feedbackList.insertBefore(feedbackItem, feedbackList.firstChild);
+        }
+        
+        // Generate star rating HTML
+        function generateStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<span class="star filled"><i class="fas fa-star"></i></span>';
+                } else {
+                    stars += '<span class="star"><i class="far fa-star"></i></span>';
+                }
+            }
+            return stars;
+        }
+        
+        // Show alert message
+        function showAlert(message, type) {
+            const alertDiv = document.getElementById('feedbackAlert');
+            alertDiv.innerHTML = message;
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.style.display = 'block';
+            
+            // Scroll to alert
+            alertDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Hide alert after 5 seconds
+            setTimeout(() => {
+                hideAlert();
+            }, 5000);
+        }
+        
+        // Hide alert message
+        function hideAlert() {
+            const alertDiv = document.getElementById('feedbackAlert');
+            alertDiv.style.display = 'none';
         }
     </script>
 </body>
