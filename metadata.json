@@ -1,0 +1,9 @@
+{
+  "name": "Protector AI",
+  "description": "An elegant, voice-enabled AI assistant with premium black and gold aesthetic.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}

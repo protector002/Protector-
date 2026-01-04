@@ -1,44 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1897361971231216"
-     crossorigin="anonymous"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTECTOR Designs | Professional Graphic Design</title>
+    <title>Enockie Official - Gospel Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles & Variables */
         :root {
-            --primary: #2A4B7C;    /* Deep Trust Blue */
-            --secondary: #FF6B35;   /* Energetic Orange */
-            --accent: #34D1BF;      /* Fresh Teal */
-            --dark: #121212;        /* True Dark */
-            --darker: #0A0A0A;      /* Darker for backgrounds */
-            --light: #FFFFFF;       /* Pure White */
-            --light-gray: #F5F7FA;  /* Light Gray for backgrounds */
-            --text: #2D3748;        /* Dark Text - Better contrast */
-            --text-light: #718096;  /* Light Text */
-            --text-on-dark: #FFFFFF; /* White text on dark backgrounds */
-            --border-light: #E2E8F0; /* Light borders */
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* Dark Mode Variables */
-        body.dark-mode {
-            --primary: #4A7BC3;     /* Lighter blue for dark mode */
-            --secondary: #FF8C5A;   /* Lighter orange for dark mode */
-            --accent: #5AE3CF;      /* Lighter teal for dark mode */
-            --dark: #121212;        /* Dark background */
-            --darker: #0A0A0A;      /* Even darker for elements */
-            --light: #1E1E1E;       /* Dark surface */
-            --light-gray: #2D2D2D;  /* Dark gray for backgrounds */
-            --text: #E2E8F0;        /* Light text */
-            --text-light: #A0AEC0;  /* Lighter text */
-            --text-on-dark: #FFFFFF; /* White text */
-            --border-light: #4A5568; /* Dark borders */
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --gold: #d4af37;
+            --light-gold: #f4e4a6;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
         }
 
         * {
@@ -48,16 +22,10 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            background-color: var(--light-gray);
-            color: var(--text);
-            overflow-x: hidden;
+            background-color: var(--primary-black);
+            color: var(--white);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -67,699 +35,435 @@
             padding: 0 20px;
         }
 
-        section {
-            padding: 100px 0;
+        /* Header Styles */
+        header {
+            background-color: rgba(10, 10, 10, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text);
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
         }
 
-        body.dark-mode h1,
-        body.dark-mode h2,
-        body.dark-mode h3,
-        body.dark-mode h4 {
-            color: var(--text-on-dark);
+        .logo {
+            display: flex;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 3.5rem;
+        .logo h1 {
+            font-size: 28px;
+            color: var(--gold);
+            margin-left: 10px;
         }
 
-        h2 {
-            font-size: 2.5rem;
+        .logo i {
+            font-size: 32px;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            padding-top: 80px;
         }
 
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            border-radius: 2px;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: var(--text);
-            line-height: 1.7;
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--gold);
         }
 
-        body.dark-mode p {
-            color: var(--text);
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
 
         .btn {
             display: inline-block;
+            background-color: var(--gold);
+            color: var(--primary-black);
             padding: 12px 30px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 30px;
             text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
             cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .btn:hover:before {
-            width: 100%;
         }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            background-color: var(--light-gold);
+            transform: translateY(-3px);
         }
 
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* Bio Section */
+        .bio {
+            padding: 100px 0;
+            background-color: var(--secondary-black);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--gold);
+            font-size: 36px;
+        }
+
+        .bio-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .bio-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .bio-image img {
             width: 100%;
-            padding: 20px 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: var(--transition);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-bottom: 1px solid var(--border-light);
+            height: auto;
+            display: block;
         }
 
-        body.dark-mode header {
-            background: rgba(30, 30, 30, 0.95);
-            border-bottom: 1px solid var(--border-light);
+        .bio-text {
+            flex: 1;
         }
 
-        header.scrolled {
-            padding: 15px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        .bio-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--gold);
         }
 
-        .navbar {
+        .bio-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        /* Music Section */
+        .music {
+            padding: 100px 0;
+            background-color: var(--primary-black);
+        }
+
+        .music-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            margin: 0 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--gold);
+            color: var(--primary-black);
+        }
+
+        .songs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .song-card {
+            background-color: var(--secondary-black);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .song-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .song-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .song-info {
+            padding: 20px;
+        }
+
+        .song-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+
+        .song-description {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .song-controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        body.dark-mode .logo {
-            color: var(--accent);
-        }
-
-        .logo i {
-            margin-right: 10px;
-            color: var(--secondary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        body.dark-mode .nav-links a {
-            color: var(--text-on-dark);
-        }
-
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        body.dark-mode .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary);
-        }
-
-        body.dark-mode .menu-toggle {
-            color: var(--accent);
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: none;
+        .play-btn, .download-btn {
+            background-color: var(--gold);
+            color: var(--primary-black);
             border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-left: 20px;
-            transition: var(--transition);
             width: 40px;
             height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(42, 75, 124, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        body.dark-mode .theme-toggle {
-            color: var(--accent);
-            background: rgba(90, 227, 207, 0.1);
+        .play-btn:hover, .download-btn:hover {
+            background-color: var(--light-gold);
         }
 
-        .theme-toggle:hover {
-            transform: rotate(30deg);
-            background: rgba(42, 75, 124, 0.2);
+        .download-stats {
+            font-size: 14px;
+            color: #ccc;
         }
 
-        body.dark-mode .theme-toggle:hover {
-            background: rgba(90, 227, 207, 0.2);
-        }
-
-        /* Hero Section - UPDATED WITH HUMANS */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(42,75,124,0.9) 0%, rgba(26,26,46,0.9) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.5s;
-            color: white;
-            text-align: center;
-            width: 100%;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.8s;
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-            text-align: center;
-        }
-
-        .hero .btn {
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 1.1s;
-        }
-
-        .typewriter-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .typewriter {
-            overflow: hidden;
-            border-right: .15em solid var(--accent);
-            white-space: nowrap;
-            margin: 0 auto;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .floating-shapes {
-            position: absolute;
-            top: 0;
+        /* Audio Player */
+        .audio-player {
+            position: fixed;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
+            background-color: var(--secondary-black);
+            padding: 15px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
         }
 
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
+        .player-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .shape:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            width: 40px;
-            height: 40px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation-delay: 0s;
+        .song-details {
+            display: flex;
+            align-items: center;
         }
 
-        .shape:nth-child(2) {
-            top: 70%;
-            left: 80%;
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation-delay: 2s;
-        }
-
-        .shape:nth-child(3) {
-            top: 30%;
-            left: 85%;
+        .current-song-image {
             width: 50px;
             height: 50px;
-            background: var(--accent);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            animation-delay: 4s;
-        }
-
-        .shape:nth-child(4) {
-            top: 80%;
-            left: 15%;
-            width: 70px;
-            height: 70px;
-            background: var(--secondary);
-            border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
-            animation-delay: 1s;
-        }
-
-        /* Portfolio Section - UPDATED WITH HUMANS */
-        .portfolio {
-            background-color: var(--light);
-        }
-
-        body.dark-mode .portfolio {
-            background-color: var(--light);
-        }
-
-        .portfolio-filter {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
-            margin: 5px;
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 600;
-        }
-
-        body.dark-mode .filter-btn {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        body.dark-mode .filter-btn.active, 
-        body.dark-mode .filter-btn:hover {
-            background: var(--accent);
-            color: var(--dark);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-item {
-            border-radius: 10px;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-            cursor: pointer;
-            background: var(--light);
-            border: 1px solid var(--border-light);
+            margin-right: 15px;
         }
 
-        body.dark-mode .portfolio-item {
-            background: var(--light);
-            border: 1px solid var(--border-light);
-        }
-
-        .portfolio-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .portfolio-img {
+        .current-song-image img {
             width: 100%;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .current-song-info h4 {
+            font-size: 16px;
+            color: var(--gold);
+        }
+
+        .current-song-info p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .player-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .player-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .player-btn:hover {
+            color: var(--gold);
+        }
+
+        .play-pause {
+            background-color: var(--gold);
+            color: var(--primary-black);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            position: relative;
         }
 
-        .portfolio-img:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .play-pause:hover {
+            background-color: var(--light-gold);
+            color: var(--primary-black);
+        }
+
+        .progress-container {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .progress-bar {
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            transition: var(--transition);
-        }
-
-        .portfolio-item:hover .portfolio-img:after {
-            background: rgba(0,0,0,0.1);
-        }
-
-        .portfolio-content {
-            padding: 20px;
-            background: var(--light);
-            transition: var(--transition);
-        }
-
-        body.dark-mode .portfolio-content {
-            background: var(--light);
-        }
-
-        .portfolio-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-
-        body.dark-mode .portfolio-content h3 {
-            color: var(--text);
-        }
-
-        .portfolio-content p {
-            color: var(--text-light);
-        }
-
-        body.dark-mode .portfolio-content p {
-            color: var(--text-light);
-        }
-
-        /* Live Projects Section */
-        .live-projects {
-            background-color: var(--light-gray);
-        }
-
-        body.dark-mode .live-projects {
-            background-color: var(--darker);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .project-card {
-            background: var(--light);
-            border-radius: 10px;
+            height: 5px;
+            background-color: #444;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border-light);
-            position: relative;
+            cursor: pointer;
         }
 
-        body.dark-mode .project-card {
-            background: var(--light);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .project-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+        .progress {
             height: 100%;
-            background: rgba(0,0,0,0.3);
-            transition: var(--transition);
+            background-color: var(--gold);
+            width: 0%;
         }
 
-        .project-card:hover .project-image::after {
-            background: rgba(0,0,0,0.1);
+        .time {
+            font-size: 14px;
+            color: #ccc;
+            min-width: 40px;
         }
 
-        .project-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--secondary);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--secondary-black);
         }
 
-        .project-content {
-            padding: 20px;
+        .contact-container {
+            display: flex;
+            gap: 50px;
         }
 
-        .project-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text);
+        .contact-info {
+            flex: 1;
         }
 
-        .project-content p {
-            color: var(--text-light);
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
             margin-bottom: 15px;
         }
 
-        .project-links {
+        .contact-item i {
+            font-size: 20px;
+            color: var(--gold);
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .social-links {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .project-link {
-            display: inline-flex;
+        .social-link {
+            display: flex;
             align-items: center;
-            padding: 8px 20px;
-            background: var(--primary);
-            color: white;
-            border-radius: 5px;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--gold);
+            color: var(--primary-black);
+            border-radius: 50%;
             text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
+            transition: all 0.3s;
         }
 
-        .project-link:hover {
-            background: var(--secondary);
+        .social-link:hover {
+            background-color: var(--light-gold);
             transform: translateY(-3px);
         }
 
-        .project-link i {
-            margin-right: 8px;
-        }
-
-        .project-link.secondary {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        body.dark-mode .project-link.secondary {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .project-link.secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* User Journey Steps */
-        .user-journey {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-
-        .journey-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 0 20px;
-            max-width: 150px;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .step-text {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        /* Feedback Section */
-        .feedback-section {
-            background-color: var(--light);
-        }
-
-        body.dark-mode .feedback-section {
-            background-color: var(--light);
-        }
-
-        .feedback-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .feedback-form {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            border: 1px solid var(--border-light);
-        }
-
-        body.dark-mode .feedback-form {
-            background: var(--light);
-        }
-
-        .feedback-form h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--text);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 576px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+        .contact-form {
+            flex: 1;
         }
 
         .form-group {
@@ -769,733 +473,22 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text);
+            color: var(--gold);
         }
 
         .form-control {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--border-light);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: var(--light);
-            color: var(--text);
-        }
-
-        body.dark-mode .form-control {
-            background: var(--light);
-            border-color: var(--border-light);
-            color: var(--text);
+            color: var(--white);
+            font-size: 16px;
         }
 
         .form-control:focus {
-            border-color: var(--primary);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(42, 75, 124, 0.2);
-        }
-
-        body.dark-mode .form-control:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(90, 227, 207, 0.2);
-        }
-
-        select.form-control {
-            cursor: pointer;
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .feedback-display {
-            margin-top: 40px;
-        }
-
-        .feedback-display h3 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--text);
-        }
-
-        .feedback-item {
-            background: var(--light);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-light);
-            transition: var(--transition);
-        }
-
-        body.dark-mode .feedback-item {
-            background: var(--light);
-        }
-
-        .feedback-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .feedback-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .feedback-project {
-            font-weight: 600;
-            color: var(--primary);
-            background: rgba(42, 75, 124, 0.1);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        body.dark-mode .feedback-project {
-            color: var(--accent);
-            background: rgba(90, 227, 207, 0.1);
-        }
-
-        .feedback-author {
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 5px;
-        }
-
-        .feedback-date {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .feedback-content {
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .no-feedback {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        /* Fixed Rating Styles */
-        .rating {
-            display: flex;
-            margin: 10px 0;
-        }
-
-        .star {
-            color: #ddd;
-            font-size: 1.5rem;
-            margin-right: 8px;
-            transition: var(--transition);
-            cursor: pointer;
-            padding: 2px;
-        }
-
-        .star:hover {
-            transform: scale(1.2);
-        }
-
-        .star.filled {
-            color: #FFC107;
-        }
-
-        .rating-hint {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-top: 5px;
-            display: block;
-        }
-
-        .required-star {
-            color: #e74c3c;
-        }
-
-        /* Success/Error Messages */
-        .alert {
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            text-align: center;
-            display: none;
-        }
-
-        .alert-success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        body.dark-mode .alert-success {
-            background: #0f5132;
-            color: #d1e7dd;
-            border-color: #0f5132;
-        }
-
-        .alert-error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        body.dark-mode .alert-error {
-            background: #842029;
-            color: #f8d7da;
-            border-color: #842029;
-        }
-
-        /* Visit Prompt */
-        .visit-prompt {
-            text-align: center;
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
-
-        .visit-prompt a {
-            color: white;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .visit-prompt a:hover {
-            color: var(--accent);
-        }
-
-        /* Services Section */
-        .services {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-            color: white;
-        }
-
-        body.dark-mode .services {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--primary) 100%);
-        }
-
-        .services h2 {
-            color: white;
-        }
-
-        .services h2:after {
-            background: linear-gradient(to right, var(--secondary), var(--accent));
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .service-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .service-card p {
-            color: rgba(255,255,255,0.8);
-        }
-
-        /* About Section - UPDATED WITH HUMANS */
-        .about {
-            background-color: var(--light-gray);
-        }
-
-        body.dark-mode .about {
-            background-color: var(--darker);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            text-align: left;
-        }
-
-        .about-text h2:after {
-            left: 0;
-            transform: none;
-        }
-
-        .skills {
-            margin-top: 30px;
-        }
-
-        .skill {
-            margin-bottom: 20px;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .skill-name span {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        body.dark-mode .skill-name span {
-            color: var(--text-on-dark);
-        }
-
-        .skill-bar {
-            height: 8px;
-            background: var(--border-light);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        body.dark-mode .skill-bar {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            border-radius: 4px;
-            width: 0;
-            transition: width 1.5s ease;
-        }
-
-        .about-image {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            opacity: 0;
-            transform: translateX(50px);
-        }
-
-        .about-image.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .about-img {
-            width: 100%;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            position: relative;
-        }
-
-        .about-img:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
-        }
-
-        /* Testimonials Section - UPDATED WITH HUMAN AVATARS */
-        .testimonials {
-            background-color: var(--light);
-        }
-
-        body.dark-mode .testimonials {
-            background-color: var(--light);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: var(--light);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(30px);
-            border: 1px solid var(--border-light);
-        }
-
-        body.dark-mode .testimonial-card {
-            background: var(--light);
-            border: 1px solid var(--border-light);
-        }
-
-        .testimonial-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            color: var(--text);
-        }
-
-        body.dark-mode .testimonial-content {
-            color: var(--text);
-        }
-
-        .testimonial-content:before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--accent);
-            position: absolute;
-            top: -20px;
-            left: -10px;
-            opacity: 0.3;
-            line-height: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .author-info h4 {
-            margin-bottom: 5px;
-            color: var(--text);
-        }
-
-        body.dark-mode .author-info h4 {
-            color: var(--text);
-        }
-
-        .author-info p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        body.dark-mode .author-info p {
-            color: var(--text-light);
-        }
-
-        /* FAQ Section */
-        .faq {
-            background-color: var(--light-gray);
-        }
-
-        body.dark-mode .faq {
-            background-color: var(--darker);
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            opacity: 0;
-            transform: translateY(20px);
-            background: var(--light);
-            border: 1px solid var(--border-light);
-        }
-
-        body.dark-mode .faq-item {
-            background: var(--light);
-            border: 1px solid var(--border-light);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        .faq-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .faq-question {
-            padding: 20px;
-            background: var(--light);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            transition: var(--transition);
-            color: var(--text);
-        }
-
-        body.dark-mode .faq-question {
-            background: var(--light);
-            color: var(--text);
-        }
-
-        .faq-question:hover {
-            background: #e9ecef;
-        }
-
-        body.dark-mode .faq-question:hover {
-            background: rgba(255,255,255,0.05);
-        }
-
-        .faq-question.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .faq-icon {
-            transition: var(--transition);
-            color: var(--text-light);
-        }
-
-        .faq-question.active .faq-icon {
-            transform: rotate(180deg);
-            color: white;
-        }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            background: var(--light);
-        }
-
-        body.dark-mode .faq-answer {
-            background: var(--light);
-        }
-
-        .faq-answer.active {
-            padding: 20px;
-            max-height: 500px;
-        }
-
-        .faq-answer p {
-            color: var(--text);
-        }
-
-        body.dark-mode .faq-answer p {
-            color: var(--text);
-        }
-
-        /* Process Section - UPDATED WITH HUMANS */
-        .process {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-            color: white;
-        }
-
-        body.dark-mode .process {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--primary) 100%);
-        }
-
-        .process h2 {
-            color: white;
-        }
-
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 50px;
-        }
-
-        .process-steps:before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: rgba(255,255,255,0.3);
-            z-index: 1;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .process-step.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            color: var(--dark);
-        }
-
-        .step-content h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-            color: white;
-        }
-
-        .step-content p {
-            color: rgba(255,255,255,0.8);
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--light);
-        }
-
-        body.dark-mode .contact {
-            background: var(--light);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            margin-right: 15px;
-        }
-
-        .contact-form {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-light);
-        }
-
-        body.dark-mode .contact-form {
-            background: var(--light);
-            border: 1px solid var(--border-light);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--border-light);
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: var(--light);
-            color: var(--text);
-        }
-
-        body.dark-mode .form-control {
-            background: var(--light);
-            border-color: var(--border-light);
-            color: var(--text);
-        }
-
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(42, 75, 124, 0.2);
-        }
-
-        body.dark-mode .form-control:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(90, 227, 207, 0.2);
-        }
-
-        .form-control::placeholder {
-            color: var(--text-light);
+            border-color: var(--gold);
         }
 
         textarea.form-control {
@@ -1505,1133 +498,589 @@
 
         /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
+            background-color: var(--primary-black);
+            padding: 50px 0 20px;
+            text-align: center;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+        .newsletter {
+            flex: 1;
+            text-align: left;
+        }
+
+        .newsletter h3 {
+            color: var(--gold);
             margin-bottom: 15px;
-            color: white;
-        }
-
-        .footer-about p {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-links h3, .footer-newsletter h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-            color: white;
-        }
-
-        .footer-links h3:after, .footer-newsletter h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--secondary);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
         }
 
         .newsletter-form {
             display: flex;
-            margin-top: 15px;
         }
 
-        .newsletter-input {
+        .newsletter-form input {
             flex: 1;
             padding: 12px 15px;
-            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 5px 0 0 5px;
-            background: rgba(255,255,255,0.1);
-            color: white;
+            color: var(--white);
         }
 
-        .newsletter-input::placeholder {
-            color: rgba(255,255,255,0.5);
-        }
-
-        .newsletter-btn {
-            padding: 0 20px;
-            background: var(--secondary);
-            color: white;
+        .newsletter-form button {
+            background-color: var(--gold);
+            color: var(--primary-black);
             border: none;
+            padding: 0 20px;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
-            transition: var(--transition);
+            transition: background-color 0.3s;
         }
 
-        .newsletter-btn:hover {
-            background: var(--accent);
+        .newsletter-form button:hover {
+            background-color: var(--light-gold);
         }
 
-        .social-links {
+        .footer-links {
+            flex: 1;
             display: flex;
-            margin-top: 20px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            margin-right: 10px;
-            color: white;
+        }
+
+        .footer-links a {
+            color: var(--white);
             text-decoration: none;
-            transition: var(--transition);
+            margin: 0 15px;
+            transition: color 0.3s;
         }
 
-        .social-link:hover {
-            background: var(--secondary);
-            transform: translateY(-5px);
+        .footer-links a:hover {
+            color: var(--gold);
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(10deg);
-            }
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--accent); }
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50% }
-            50% { background-position: 100% 50% }
-            100% { background-position: 0% 50% }
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* New Elements */
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
+        .footer-social {
+            flex: 1;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            opacity: 0;
-            visibility: hidden;
-            z-index: 999;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: none;
+            justify-content: flex-end;
+            gap: 15px;
         }
 
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
         }
 
-        .back-to-top:hover {
-            background: var(--secondary);
-            transform: translateY(-5px);
+        /* Admin Dashboard Styles */
+        .admin-section {
+            display: none;
+            min-height: 100vh;
+            padding-top: 100px;
+            background-color: var(--secondary-black);
         }
 
-        /* Sticky Get Quote Button */
-        .sticky-quote {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .sticky-quote.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Portfolio Modal */
-        .portfolio-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .portfolio-modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: var(--light);
-            width: 90%;
-            max-width: 900px;
-            border-radius: 10px;
-            overflow: hidden;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-            border: 1px solid var(--border-light);
-        }
-
-        body.dark-mode .modal-content {
-            background: var(--light);
-            color: var(--text);
-        }
-
-        .portfolio-modal.active .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-header {
-            padding: 20px;
-            background: var(--primary);
-            color: white;
+        .admin-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .modal-close {
+        .admin-title {
+            color: var(--gold);
+            font-size: 32px;
+        }
+
+        .admin-nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .admin-nav-btn {
+            background: none;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .admin-nav-btn.active, .admin-nav-btn:hover {
+            background-color: var(--gold);
+            color: var(--primary-black);
+        }
+
+        .admin-panel {
+            display: none;
+            background-color: var(--primary-black);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background-color: var(--secondary-black);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .admin-table th, .admin-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-table th {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .action-btn {
             background: none;
             border: none;
-            color: white;
-            font-size: 1.5rem;
+            color: var(--white);
             cursor: pointer;
-            transition: var(--transition);
+            margin-right: 10px;
+            transition: color 0.3s;
         }
 
-        .modal-close:hover {
-            transform: rotate(90deg);
+        .edit-btn:hover {
+            color: var(--gold);
         }
 
-        .modal-body {
-            padding: 30px;
-            max-height: 70vh;
-            overflow-y: auto;
+        .delete-btn:hover {
+            color: #ff4d4d;
         }
 
-        .modal-image {
-            width: 100%;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .modal-body h3, .modal-body h4 {
-            color: var(--text);
-        }
-
-        body.dark-mode .modal-body h3,
-        body.dark-mode .modal-body h4 {
-            color: var(--text);
-        }
-
-        .modal-body p {
-            color: var(--text);
-        }
-
-        body.dark-mode .modal-body p {
-            color: var(--text);
-        }
-
-        /* Preloader */
-        #preloader {
+        /* Login Modal */
+        .login-modal {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--light-gray);
-            display: flex;
-            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
             align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            justify-content: center;
         }
 
-        body.dark-mode #preloader {
-            background: var(--darker);
-        }
-
-        #preloader.fade-out {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(42, 75, 124, 0.2);
-            border-radius: 50%;
-            border-top-color: var(--primary);
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        /* Before/After Slider */
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            height: 400px;
+        .login-form {
+            background-color: var(--secondary-black);
+            padding: 40px;
             border-radius: 10px;
-            overflow: hidden;
-            margin: 30px 0;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-light);
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .comparison-slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .before-image {
-            width: 50%;
-            overflow: hidden;
-            position: absolute;
-            height: 100%;
-        }
-
-        .slider-handle {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: white;
-            cursor: ew-resize;
-            transform: translateX(-50%);
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-
-        .slider-handle:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 300% 300%;
-            animation: gradient 3s ease infinite;
-        }
-
-        /* Cursor Effects */
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.2s, height 0.2s;
-        }
-
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: all 0.1s ease-out;
-        }
-
-        /* Christmas Tree Styles */
-        .christmas-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            cursor: pointer;
-            animation: float-tree 6s ease-in-out infinite;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
-        }
-
-        .tree {
-            position: relative;
-            width: 120px;
-            height: 160px;
-            margin: 0 auto 10px;
-        }
-
-        .tree-layer {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 50% 50% 0 0;
-            background: linear-gradient(to bottom, #0a5f0a, #1e7c1e, #0a5f0a);
-            box-shadow: 
-                inset 0 0 10px rgba(0,0,0,0.3),
-                0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .tree-layer-1 {
-            width: 100px;
-            height: 60px;
-            top: 80px;
-            z-index: 1;
-            animation: layer-sway 4s ease-in-out infinite;
-        }
-
-        .tree-layer-2 {
-            width: 80px;
-            height: 50px;
-            top: 50px;
-            z-index: 2;
-            animation: layer-sway 3.5s ease-in-out infinite;
-        }
-
-        .tree-layer-3 {
-            width: 60px;
-            height: 40px;
-            top: 25px;
-            z-index: 3;
-            animation: layer-sway 3s ease-in-out infinite;
-        }
-
-        .tree-layer-4 {
-            width: 40px;
-            height: 30px;
-            top: 10px;
-            z-index: 4;
-            animation: layer-sway 2.5s ease-in-out infinite;
-        }
-
-        .tree-trunk {
-            position: absolute;
-            top: 140px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 30px;
-            background: linear-gradient(to right, #5d4037, #8d6e63, #5d4037);
-            border-radius: 5px 5px 0 0;
-            z-index: 0;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
-        }
-
-        .tree-star {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 25px;
-            height: 25px;
-            background: gold;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            animation: star-twinkle 2s infinite alternate;
-            z-index: 5;
-            box-shadow: 0 0 10px gold;
-        }
-
-        /* Ornaments */
-        .ornament {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            z-index: 10;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            animation: ornament-twinkle 3s infinite alternate;
-        }
-
-        .ornament-1 {
-            top: 90px;
-            left: 30px;
-            background: radial-gradient(circle at 30% 30%, #ff5252, #b71c1c);
-            animation-delay: 0s;
-        }
-
-        .ornament-2 {
-            top: 110px;
-            left: 70px;
-            background: radial-gradient(circle at 30% 30%, #2196f3, #0d47a1);
-            animation-delay: 0.5s;
-        }
-
-        .ornament-3 {
-            top: 60px;
-            left: 50px;
-            background: radial-gradient(circle at 30% 30%, #ffeb3b, #f57f17);
-            animation-delay: 1s;
-        }
-
-        .ornament-4 {
-            top: 80px;
-            left: 80px;
-            background: radial-gradient(circle at 30% 30%, #e91e63, #880e4f);
-            animation-delay: 1.5s;
-        }
-
-        .ornament-5 {
-            top: 40px;
-            left: 40px;
-            background: radial-gradient(circle at 30% 30%, #9c27b0, #4a148c);
-            animation-delay: 2s;
-        }
-
-        .ornament-6 {
-            top: 50px;
-            left: 70px;
-            background: radial-gradient(circle at 30% 30%, #4caf50, #1b5e20);
-            animation-delay: 2.5s;
-        }
-
-        /* Christmas Lights */
-        .light {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            z-index: 6;
-            animation: light-pulse 2s infinite alternate;
-        }
-
-        .light-1 {
-            top: 100px;
-            left: 25px;
-            background: #ff1744;
-            box-shadow: 0 0 8px #ff1744;
-            animation-delay: 0s;
-        }
-
-        .light-2 {
-            top: 70px;
-            left: 85px;
-            background: #2979ff;
-            box-shadow: 0 0 8px #2979ff;
-            animation-delay: 0.3s;
-        }
-
-        .light-3 {
-            top: 50px;
-            left: 60px;
-            background: #00e676;
-            box-shadow: 0 0 8px #00e676;
-            animation-delay: 0.6s;
-        }
-
-        .light-4 {
-            top: 35px;
-            left: 35px;
-            background: #ff9100;
-            box-shadow: 0 0 8px #ff9100;
-            animation-delay: 0.9s;
-        }
-
-        .light-5 {
-            top: 120px;
-            left: 60px;
-            background: #e040fb;
-            box-shadow: 0 0 8px #e040fb;
-            animation-delay: 1.2s;
-        }
-
-        .merry-christmas {
-            font-size: 16px;
-            font-weight: bold;
-            color: #c62828;
+        .login-form h2 {
+            color: var(--gold);
+            margin-bottom: 20px;
             text-align: center;
-            margin-top: 10px;
-            animation: text-bounce 3s infinite;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(45deg, #c62828, #ff8a65);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: rgba(255,255,255,0.8);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Animations */
-        @keyframes layer-sway {
-            0%, 100% { transform: translateX(-50%) rotate(0deg); }
-            25% { transform: translateX(-50%) rotate(-1.5deg); }
-            75% { transform: translateX(-50%) rotate(1.5deg); }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
         }
 
-        @keyframes star-twinkle {
-            0% { opacity: 0.7; transform: translateX(-50%) scale(1) rotate(0deg); }
-            100% { opacity: 1; transform: translateX(-50%) scale(1.1) rotate(5deg); box-shadow: 0 0 15px gold, 0 0 25px orange; }
-        }
-
-        @keyframes ornament-twinkle {
-            0% { transform: scale(1); box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
-            100% { transform: scale(1.2); box-shadow: 0 0 10px rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.4); }
-        }
-
-        @keyframes light-pulse {
-            0% { opacity: 0.6; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.3); }
-        }
-
-        @keyframes text-bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
-        }
-
-        @keyframes float-tree {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Snow effect */
-        .snow {
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 7;
+            top: 15px;
+            right: 15px;
         }
 
-        .snowflake {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: snowfall linear infinite;
-        }
-
-        @keyframes snowfall {
-            0% { transform: translateY(-10px) rotate(0deg); }
-            100% { transform: translateY(180px) rotate(360deg); }
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1200px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-        }
-
+        /* Responsive Styles */
         @media (max-width: 992px) {
-            h1 {
-                font-size: 3rem;
+            .bio-content, .contact-container {
+                flex-direction: column;
             }
             
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .about-content, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-text h2 {
-                text-align: center;
-            }
-            
-            .about-text h2:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .process-steps {
+            .footer-content {
                 flex-direction: column;
                 gap: 30px;
             }
+            
+            .newsletter, .footer-links, .footer-social {
+                width: 100%;
+                text-align: center;
+            }
 
-            .process-steps:before {
-                display: none;
+            .stats-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
         }
 
         @media (max-width: 768px) {
-            .menu-toggle {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
                 display: block;
             }
             
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                background: var(--light);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                transition: var(--transition);
-                border-top: 1px solid var(--border-light);
-            }
-
-            body.dark-mode .nav-links {
-                background: var(--light);
+            .hero h2 {
+                font-size: 36px;
             }
             
-            .nav-links.active {
-                left: 0;
+            .section-title {
+                font-size: 30px;
             }
             
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .typewriter {
-                white-space: normal;
-                border-right: none;
-                animation: none;
-                display: block;
-            }
-
-            .sticky-quote {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .christmas-container {
-                top: 10px;
-                right: 10px;
-            }
-            
-            .tree {
-                width: 90px;
-                height: 120px;
-            }
-            
-            .tree-layer-1 {
-                width: 75px;
-                height: 45px;
-                top: 60px;
-            }
-            
-            .tree-layer-2 {
-                width: 60px;
-                height: 37px;
-                top: 37px;
-            }
-            
-            .tree-layer-3 {
-                width: 45px;
-                height: 30px;
-                top: 18px;
-            }
-            
-            .tree-layer-4 {
-                width: 30px;
-                height: 22px;
-                top: 7px;
-            }
-            
-            .tree-trunk {
-                top: 105px;
-                width: 15px;
-                height: 22px;
-            }
-            
-            .tree-star {
-                width: 18px;
-                height: 18px;
-                top: -8px;
-            }
-            
-            .ornament, .light {
-                width: 7px;
-                height: 7px;
-            }
-            
-            .merry-christmas {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            section {
-                padding: 70px 0;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.2;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .portfolio-grid, .services-grid, .testimonials-grid, .projects-grid {
+            .songs-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .player-controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .progress-container {
+                width: 100%;
+                margin: 10px 0;
+            }
 
-            .typewriter {
-                white-space: normal;
-                border-right: none;
-                animation: none;
+            .admin-nav {
+                flex-direction: column;
+            }
+
+            .admin-table {
+                display: block;
+                overflow-x: auto;
             }
         }
-        
-        /* Success message */
-        .success-message {
-            display: none;
-            background: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        .whatsapp-link {
-            display: inline-flex;
-            align-items: center;
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: var(--transition);
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
         }
-        
-        .whatsapp-link:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-        }
-        
-        .whatsapp-link i {
-            margin-right: 8px;
-        }
+    /* Music Card Styles */
+.song-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+}
+
+.song-card h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.song-card .genre {
+    color: #8a2be2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.song-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.song-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.play-btn, .download-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #8a2be2;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover, .download-btn:hover {
+    background: #8a2be2;
+}
+
+/* Video Card Styles */
+.video-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 43, 226, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-overlay i {
+    font-size: 3rem;
+    color: white;
+}
+
+.video-info {
+    padding: 1rem;
+}
+
+.video-info h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.video-info p {
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.views {
+    color: #8a2be2;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Empty States */
+.no-songs, .no-videos {
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+}
+
+.no-songs i, .no-videos i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Admin Link Style */
+.admin-link {
+    background: linear-gradient(to right, #8a2be2, #ff6b6b);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    color: white !important;
+    font-weight: 600;
+}
     </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Christmas Tree -->
-    <div class="christmas-container" id="christmasContainer">
-        <div class="tree">
-            <div class="tree-star"></div>
-            <div class="tree-layer tree-layer-1"></div>
-            <div class="tree-layer tree-layer-2"></div>
-            <div class="tree-layer tree-layer-3"></div>
-            <div class="tree-layer tree-layer-4"></div>
-            <div class="tree-trunk"></div>
-            
-            <!-- Ornaments -->
-            <div class="ornament ornament-1"></div>
-            <div class="ornament ornament-2"></div>
-            <div class="ornament ornament-3"></div>
-            <div class="ornament ornament-4"></div>
-            <div class="ornament ornament-5"></div>
-            <div class="ornament ornament-6"></div>
-            
-            <!-- Lights -->
-            <div class="light light-1"></div>
-            <div class="light light-2"></div>
-            <div class="light light-3"></div>
-            <div class="light light-4"></div>
-            <div class="light light-5"></div>
-            
-            <!-- Snow -->
-            <div class="snow" id="snowContainer"></div>
-        </div>
-        <div class="merry-christmas">Merry Christmas!</div>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
-    <!-- Header & Navigation -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo"><i class="fas fa-shield-alt"></i>PROTECTOR</a>
-                <div class="menu-toggle" id="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links" id="nav-links">
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+               <h1>Enockie Official</h1>--/>
+            </div>
+            <nav>
+                <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#live-projects">Live Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#bio">Bio</a></li>
+                    <li><a href="#music">Music</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <button class="theme-toggle" id="themeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
+                    <li><a href="#" class="btn" id="admin-login">Admin</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+        <!-- In your header navigation menu -->
+<nav>
+    <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        
+        <!-- Single Backend Admin Link -->
+        <li><a href="adminlogin.php" class="admin-link">
+            <i class="fas fa-cog"></i> Admin Panel
+        </a></li>
+    </ul>
+</nav>
     </header>
 
-    <!-- Hero Section - UPDATED WITH HUMANS -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <div class="hero-content">
-            <div class="typewriter-container">
-                <h1><span class="typewriter">Visual Identity That Protects Your Brand</span></h1>
-            </div>
-            <p class="gradient-text">We create stunning designs that guard your brand's integrity and make it stand out in a crowded marketplace.</p>
-            <a href="#portfolio" class="btn">View Our Work</a>
+        <div class="container hero-content fade-in">
+            <h2>Welcome to Enockie Official</h2>
+            <p>Experience the power of gospel music that uplifts the soul and inspires faith</p>
+            <a href="#music" class="btn">Listen Now</a>
         </div>
     </section>
 
-    <!-- Portfolio Section - UPDATED WITH HUMANS -->
-    <section class="portfolio" id="portfolio">
+    <!-- Bio Section -->
+    <section class="bio" id="bio">
         <div class="container">
-            <h2>Our Portfolio</h2>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
-                <button class="filter-btn" data-filter="print">Print</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item visible" data-category="branding" data-modal="1">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                        <span style="z-index: 2; position: relative;">Brand Identity</span>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>EcoLife Branding</h3>
-                        <p>Complete brand identity for an eco-friendly products company.</p>
-                    </div>
+            <h2 class="section-title">About Enockie</h2>
+            <div class="bio-content">
+                <div class="bio-image">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Enockie">
                 </div>
-                <div class="portfolio-item visible" data-category="web" data-modal="2">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                        <span style="z-index: 2; position: relative;">Web Design</span>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>TechSolutions Website</h3>
-                        <p>Modern responsive website for a technology consulting firm.</p>
-                    </div>
+                <div class="bio-text">
+                    <h3>Gospel Music Minister</h3>
+                    <p>Enockie is a passionate gospel music artist dedicated to spreading the message of hope, faith, and love through inspirational music. With a soulful voice and heartfelt lyrics, Enockie's music touches the hearts of listeners around the world.</p>
+                    <p>Having started his musical journey in the church choir at a young age, Enockie has developed a unique sound that blends traditional gospel with contemporary elements. His mission is to use music as a tool for ministry and to bring people closer to God.</p>
+                    <p>Enockie has released multiple albums and singles that have blessed countless lives. His music is available on all major streaming platforms, and he continues to minister through concerts and worship events globally.</p>
+                    <a href="#contact" class="btn">Get In Touch</a>
                 </div>
-                <div class="portfolio-item visible" data-category="print" data-modal="3">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                        <span style="z-index: 2; position: relative;">Print Design</span>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Food Festival Posters</h3>
-                        <p>Vibrant poster series for a multicultural food festival.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Before/After Slider - UPDATED WITH HUMANS -->
-            <div class="comparison-slider" id="comparisonSlider">
-                <div class="before-image">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Before Design">
-                </div>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="After Design">
-                <div class="slider-handle"></div>
             </div>
         </div>
     </section>
 
-    <!-- New Live Projects Section -->
-    <section class="live-projects" id="live-projects">
+    <!-- Music Section -->
+    <section class="music" id="music">
         <div class="container">
-            <h2>Live Projects I've Worked On</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Explore the professional platforms I've contributed to. Visit each website to see my work in action, then share your feedback below.</p>
-            
-            <div class="user-journey">
-                <div class="journey-step">
-                    <div class="step-number">1</div>
-                    <div class="step-text">Click to visit the live projects</div>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">2</div>
-                    <div class="step-text">Explore and review how they work</div>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">3</div>
-                    <div class="step-text">Return here to share your feedback</div>
-                </div>
+            <h2 class="section-title">Music</h2>
+            <div class="music-filters">
+                <button class="filter-btn active">All Songs</button>
+                <button class="filter-btn">Latest</button>
+                <button class="filter-btn">Popular</button>
             </div>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-badge">Live Project</div>
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="project-content">
-                        <h3>PosterMyWall</h3>
-                        <p>An online design platform where users can create custom posters, flyers, and social media graphics with ease.</p>
-                        <div class="project-links">
-                            <a href="https://postermywall.com" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>Visit Website
-                            </a>
-                            <a href="#feedback" class="project-link secondary" onclick="setProject('PosterMyWall')">
-                                <i class="fas fa-comment"></i>Leave Feedback
-                            </a>
+            <div class="songs-grid">
+                <!-- Song 1 -->
+                <div class="song-card fade-in">
+                    <div class="song-image">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Amazing Grace">
+                    </div>
+                    <div class="song-info">
+                        <h3 class="song-title">Amazing Grace</h3>
+                        <p class="song-description">A powerful rendition of the classic hymn with contemporary arrangements.</p>
+                        <div class="song-controls">
+                            <button class="play-btn" data-song="Amazing Grace" data-image="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <span class="download-stats">1,245 Downloads</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card">
-                    <div class="project-badge">Live Project</div>
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="project-content">
-                        <h3>W3Schools</h3>
-                        <p>The world's largest web developer site, providing tutorials, references, and examples for web technologies.</p>
-                        <div class="project-links">
-                            <a href="https://www.w3schools.com" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>Visit Website
-                            </a>
-                            <a href="#feedback" class="project-link secondary" onclick="setProject('W3Schools')">
-                                <i class="fas fa-comment"></i>Leave Feedback
-                            </a>
+                <!-- Song 2 -->
+                <div class="song-card fade-in">
+                    <div class="song-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Heaven's Melody">
+                    </div>
+                    <div class="song-info">
+                        <h3 class="song-title">Heaven's Melody</h3>
+                        <p class="song-description">An uplifting worship song that will draw you into God's presence.</p>
+                        <div class="song-controls">
+                            <button class="play-btn" data-song="Heaven's Melody" data-image="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <span class="download-stats">2,187 Downloads</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card">
-                    <div class="project-badge">Live Project</div>
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="project-content">
-                        <h3>Weather.com</h3>
-                        <p>A comprehensive weather service providing forecasts, radar maps, and severe weather alerts worldwide.</p>
-                        <div class="project-links">
-                            <a href="https://weather.com" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>Visit Website
-                            </a>
-                            <a href="#feedback" class="project-link secondary" onclick="setProject('Weather.com')">
-                                <i class="fas fa-comment"></i>Leave Feedback
-                            </a>
+                <!-- Song 3 -->
+                <div class="song-card fade-in">
+                    <div class="song-image">
+                        <img src="https://images.unsplash.com/photo-1571330057255-f0f001a8ae7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Faithful God">
+                    </div>
+                    <div class="song-info">
+                        <h3 class="song-title">Faithful God</h3>
+                        <p class="song-description">A declaration of God's faithfulness through every season of life.</p>
+                        <div class="song-controls">
+                            <button class="play-btn" data-song="Faithful God" data-image="https://images.unsplash.com/photo-1571330057255-f0f001a8ae7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <span class="download-stats">1,763 Downloads</span>
                         </div>
                     </div>
                 </div>
@@ -2639,274 +1088,101 @@
         </div>
     </section>
 
-    <!-- Fixed Feedback Section -->
-    <section class="feedback-section" id="feedback">
-        <div class="container">
-            <h2>Share Your Feedback</h2>
+    <!-- Audio Player -->
+    <div class="audio-player" id="audio-player">
+        <div class="player-controls">
+            <div class="song-details">
+                <div class="current-song-image">
+                    <img src="" alt="" id="current-song-img">
+                </div>
+                <div class="current-song-info">
+                    <h4 id="current-song-title">Now Playing</h4>
+                    <p id="current-song-artist">Enockie Official</p>
+                </div>
+            </div>
             
-            <div class="visit-prompt">
-                <p><i class="fas fa-info-circle"></i> <strong>Important:</strong> Please visit the live projects above first to review how they work, then return here to share your experience!</p>
+            <div class="player-buttons">
+                <button class="player-btn" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="player-btn play-pause" id="play-pause-btn">
+                    <i class="fas fa-play" id="play-pause-icon"></i>
+                </button>
+                <button class="player-btn" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
             </div>
             
-            <div class="feedback-container">
-                <div class="feedback-form">
-                    <h3>Tell Us What You Think</h3>
-                    <div id="feedbackAlert" class="alert"></div>
-                    <form id="feedbackForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="feedbackName">Your Name</label>
-                                <input type="text" class="form-control" id="feedbackName" placeholder="Enter your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="feedbackProject">Which Project Did You Visit?</label>
-                                <select class="form-control" id="feedbackProject" required>
-                                    <option value="">Select a project you visited</option>
-                                    <option value="PosterMyWall">PosterMyWall</option>
-                                    <option value="W3Schools">W3Schools</option>
-                                    <option value="Weather.com">Weather.com</option>
-                                    <option value="Other">Other Project</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="feedbackMessage">Your Review & Feedback</label>
-                            <textarea class="form-control" id="feedbackMessage" placeholder="After visiting the website, share your thoughts on the design, functionality, user experience, and any suggestions..." required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Overall Rating <span class="required-star">*</span></label>
-                            <div class="rating" id="ratingStars">
-                                <span class="star" data-value="1"><i class="far fa-star"></i></span>
-                                <span class="star" data-value="2"><i class="far fa-star"></i></span>
-                                <span class="star" data-value="3"><i class="far fa-star"></i></span>
-                                <span class="star" data-value="4"><i class="far fa-star"></i></span>
-                                <span class="star" data-value="5"><i class="far fa-star"></i></span>
-                            </div>
-                            <input type="hidden" id="feedbackRating" value="0" required>
-                            <span class="rating-hint">Click on the stars to rate (1 = Poor, 5 = Excellent)</span>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> Submit Your Feedback
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="feedback-display">
-                    <h3>What Others Are Saying</h3>
-                    <div id="feedbackList">
-                        <!-- Feedback items will be dynamically added here -->
-                        <div class="no-feedback" id="noFeedback">
-                            No feedback yet. Be the first to share your experience after visiting the projects!
-                        </div>
-                    </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress"></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Brand Identity</h3>
-                    <p>We create cohesive visual identities that communicate your brand's values and mission.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Responsive, user-friendly websites that look great on all devices and drive conversions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h3>Print Design</h3>
-                    <p>From business cards to billboards, we create print materials that make an impact.</p>
-                </div>
+            
+            <div class="time">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
             </div>
+            
+            <button class="player-btn" id="close-player">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-    </section>
-
-    <!-- About Section - UPDATED WITH HUMANS -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About PROTECTOR Designs</h2>
-                    <p>We are a creative design studio dedicated to protecting and elevating brands through exceptional visual design. Our name reflects our commitment to guarding your brand's integrity and ensuring it stands out for all the right reasons.</p>
-                    <p>With over 8 years of experience, we've helped businesses of all sizes establish strong visual identities that resonate with their target audiences and drive growth.</p>
-                    
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>Brand Identity</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level" data-level="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>Web Design</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level" data-level="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-img">
-                        <span style="z-index: 2; position: relative;">Our Creative Team</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section - UPDATED WITH HUMAN AVATARS -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Client Testimonials</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>PROTECTOR Designs transformed our brand identity completely. Their attention to detail and understanding of our vision was exceptional.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')"></div>
-                        <div class="author-info">
-                            <h4>John D. Mutebi</h4>
-                            <p>CEO, Kampala Tech Solutions</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>The team at PROTECTOR Designs delivered beyond our expectations. They captured the essence of our restaurant perfectly.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')"></div>
-                        <div class="author-info">
-                            <h4>Sarah N. Kato</h4>
-                            <p>Owner, Taste of Uganda Restaurant</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section - UPDATED WITH HUMANS -->
-    <section class="process" id="process">
-        <div class="container">
-            <h2>Our Design Process</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Discovery</h3>
-                        <p>We begin by understanding your business, goals, and target audience.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Strategy</h3>
-                        <p>We develop a comprehensive design strategy aligned with your objectives.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Design</h3>
-                        <p>Our creative team brings your vision to life with innovative designs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does a typical design project take?</span>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The timeline depends on the scope and complexity of the project. A basic logo design might take 1-2 weeks, while a comprehensive brand identity could take 4-6 weeks.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is your pricing structure?</span>
-                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer both project-based pricing and retainer options depending on your needs. Our projects typically range from $500 for basic designs to $5,000+ for comprehensive brand systems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for bookings, collaborations, or any inquiries.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@enockieofficial.com</span>
                         </div>
-                        <div>
-                            <h3>Our Location</h3>
-                            <p>Kampala, Uganda</p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nashville, TN</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3>Phone Number</h3>
-                            <p>+256 701 354381</p>
-                            <a href="https://wa.me/256701354381" class="whatsapp-link" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
+                    
+                    <h3>Follow Enockie</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
-                    <div id="successMessage" class="success-message">
-                        Thank you for your message! We will get back to you soon.
-                    </div>
                 </div>
             </div>
         </div>
@@ -2916,685 +1192,502 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">PROTECTOR DESIGNS</div>
-                    <p>We are a creative design studio dedicated to protecting and elevating brands through exceptional visual design.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                    </div>
+                <div class="newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
+                
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <a href="#home">Home</a>
+                    <a href="#bio">Bio</a>
+                    <a href="#music">Music</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 PROTECTOR Designs. All Rights Reserved. | Kampala, Uganda</p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Enockie Official. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal" id="portfolio-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-title">Project Details</h3>
-                <button class="modal-close">&times;</button>
+    <!-- Admin Section -->
+    <section class="admin-section" id="admin-section">
+        <div class="container">
+            <div class="admin-header">
+                <h2 class="admin-title">Admin Dashboard</h2>
+                <button class="btn" id="logout-btn">Logout</button>
             </div>
-            <div class="modal-body">
-                <div class="modal-image" id="modal-image"></div>
-                <div id="modal-description">
-                    <!-- Content will be populated by JavaScript -->
+            
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-panel="dashboard">Dashboard</button>
+                <button class="admin-nav-btn" data-panel="songs">Manage Songs</button>
+                <button class="admin-nav-btn" data-panel="upload">Upload Song</button>
+                <button class="admin-nav-btn" data-panel="stats">Statistics</button>
+            </div>
+            
+            <!-- Dashboard Panel -->
+            <div class="admin-panel active" id="dashboard-panel">
+                <h3>Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Total Songs</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">45,678</div>
+                        <div class="stat-label">Total Downloads</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">3,245</div>
+                        <div class="stat-label">Monthly Listeners</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-label">Newsletter Subscribers</div>
+                    </div>
+                </div>
+                
+                <h3>Recent Activity</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-10-15</td>
+                            <td>New Song Uploaded</td>
+                            <td>Faithful God</td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-12</td>
+                            <td>Song Edited</td>
+                            <td>Heaven's Melody</td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-10</td>
+                            <td>Download Milestone</td>
+                            <td>Amazing Grace reached 1,000 downloads</td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-05</td>
+                            <td>New Subscriber</td>
+                            <td>Newsletter subscription</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Manage Songs Panel -->
+            <div class="admin-panel" id="songs-panel">
+                <h3>Manage Songs</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Downloads</th>
+                            <th>Date Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amazing Grace</td>
+                            <td>A powerful rendition of the classic hymn</td>
+                            <td>1,245</td>
+                            <td>2023-09-15</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Heaven's Melody</td>
+                            <td>An uplifting worship song</td>
+                            <td>2,187</td>
+                            <td>2023-08-22</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Faithful God</td>
+                            <td>A declaration of God's faithfulness</td>
+                            <td>1,763</td>
+                            <td>2023-10-05</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Upload Song Panel -->
+            <div class="admin-panel" id="upload-panel">
+                <h3>Upload New Song</h3>
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="song-title">Song Title</label>
+                        <input type="text" id="song-title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="song-description">Description</label>
+                        <textarea id="song-description" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="song-image">Cover Image</label>
+                        <input type="file" id="song-image" class="form-control" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="audio-file">Audio File</label>
+                        <input type="file" id="audio-file" class="form-control" accept="audio/*" required>
+                    </div>
+                    <button type="submit" class="btn">Upload Song</button>
+                </form>
+            </div>
+            
+            <!-- Statistics Panel -->
+            <div class="admin-panel" id="stats-panel">
+                <h3>Download Statistics</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Song Title</th>
+                            <th>Total Downloads</th>
+                            <th>This Month</th>
+                            <th>Last Month</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amazing Grace</td>
+                            <td>1,245</td>
+                            <td>156</td>
+                            <td>189</td>
+                        </tr>
+                        <tr>
+                            <td>Heaven's Melody</td>
+                            <td>2,187</td>
+                            <td>234</td>
+                            <td>287</td>
+                        </tr>
+                        <tr>
+                            <td>Faithful God</td>
+                            <td>1,763</td>
+                            <td>312</td>
+                            <td>265</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 style="margin-top: 30px;">Popular Songs</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">#1</div>
+                        <div class="stat-label">Heaven's Melody</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">#2</div>
+                        <div class="stat-label">Faithful God</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">#3</div>
+                        <div class="stat-label">Amazing Grace</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </div>
-
-    <!-- Sticky Get Quote Button -->
-    <div class="sticky-quote" id="stickyQuote">
-        <a href="#contact" class="btn">Get Quote</a>
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-form">
+            <button class="close-btn" id="close-login"><i class="fas fa-times"></i></button>
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="#" id="forgot-password">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
-        // Preloader
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            setTimeout(() => {
-                preloader.classList.add('fade-out');
-            }, 1000);
-        });
-
-        // Christmas tree toggle
-        document.getElementById('christmasContainer').addEventListener('click', function() {
-            this.style.display = 'none';
-        });
-
-        // Create snowflakes
-        function createSnowflakes() {
-            const snowContainer = document.getElementById('snowContainer');
-            const snowflakeCount = 20;
-            
-            for (let i = 0; i < snowflakeCount; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                
-                // Random properties for each snowflake
-                const size = Math.random() * 4 + 2;
-                const left = Math.random() * 100;
-                const animationDuration = Math.random() * 5 + 5;
-                const animationDelay = Math.random() * 5;
-                
-                snowflake.style.width = `${size}px`;
-                snowflake.style.height = `${size}px`;
-                snowflake.style.left = `${left}%`;
-                snowflake.style.animationDuration = `${animationDuration}s`;
-                snowflake.style.animationDelay = `${animationDelay}s`;
-                
-                snowContainer.appendChild(snowflake);
-            }
-        }
-
-        // Initialize snow when page loads
-        createSnowflakes();
-
         // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').style.display = 
+                document.querySelector('nav ul').style.display === 'flex' ? 'none' : 'flex';
         });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+
+        // Audio Player Functionality
+        const audioPlayer = document.getElementById('audio-player');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const playPauseIcon = document.getElementById('play-pause-icon');
+        const progressBar = document.getElementById('progress-bar');
+        const progress = document.getElementById('progress');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const currentSongTitle = document.getElementById('current-song-title');
+        const currentSongImg = document.getElementById('current-song-img');
+        const closePlayerBtn = document.getElementById('close-player');
+
+        let isPlaying = false;
+        let currentAudio = null;
+
+        // Play button event listeners
+        document.querySelectorAll('.play-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const songTitle = this.getAttribute('data-song');
+                const songImage = this.getAttribute('data-image');
+                
+                // Update player with song info
+                currentSongTitle.textContent = songTitle;
+                currentSongImg.src = songImage;
+                
+                // Show audio player
+                audioPlayer.style.display = 'block';
+                
+                // Simulate playing (in a real implementation, this would load an actual audio file)
+                isPlaying = true;
+                playPauseIcon.className = 'fas fa-pause';
+                
+                // Simulate progress (in a real implementation, this would be connected to actual audio)
+                simulateProgress();
             });
         });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
 
-            // Show/hide back to top button
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 500) {
-                backToTop.classList.add('visible');
+        // Play/Pause button
+        playPauseBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                playPauseIcon.className = 'fas fa-play';
+                isPlaying = false;
             } else {
-                backToTop.classList.remove('visible');
-            }
-
-            // Show/hide sticky quote button
-            const stickyQuote = document.getElementById('stickyQuote');
-            if (window.scrollY > 300) {
-                stickyQuote.classList.add('visible');
-            } else {
-                stickyQuote.classList.remove('visible');
+                playPauseIcon.className = 'fas fa-pause';
+                isPlaying = true;
+                simulateProgress();
             }
         });
-        
-        // Portfolio filtering
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.classList.add('visible');
-                        }, 10);
-                    } else {
-                        item.classList.remove('visible');
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 400);
-                    }
-                });
-            });
+
+        // Close player
+        closePlayerBtn.addEventListener('click', function() {
+            audioPlayer.style.display = 'none';
+            isPlaying = false;
+            playPauseIcon.className = 'fas fa-play';
+            progress.style.width = '0%';
+            currentTimeEl.textContent = '0:00';
         });
-        
-        // Animate elements on scroll
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.service-card, .about-image, .portfolio-item, .testimonial-card, .faq-item, .process-step');
+
+        // Progress bar click
+        progressBar.addEventListener('click', function(e) {
+            const percent = e.offsetX / this.offsetWidth;
+            progress.style.width = `${percent * 100}%`;
+            // In a real implementation, this would set the audio currentTime
+        });
+
+        // Simulate progress for demo purposes
+        function simulateProgress() {
+            if (!isPlaying) return;
             
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('visible');
-                    
-                    // Animate skill bars
-                    if (element.classList.contains('about-image')) {
-                        document.querySelectorAll('.skill-level').forEach(skill => {
-                            const level = skill.getAttribute('data-level');
-                            skill.style.width = level + '%';
-                        });
-                    }
+            let width = 0;
+            const interval = setInterval(() => {
+                if (!isPlaying) {
+                    clearInterval(interval);
+                    return;
                 }
-            });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        // Initial check in case elements are already in view
-        animateOnScroll();
-        
-        // Form submission with email functionality
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+                
+                if (width >= 100) {
+                    clearInterval(interval);
+                    isPlaying = false;
+                    playPauseIcon.className = 'fas fa-play';
+                    return;
+                }
+                
+                width += 0.5;
+                progress.style.width = `${width}%`;
+                
+                // Update time display (simulated)
+                const totalSeconds = 240; // 4 minutes
+                const currentSeconds = Math.floor(totalSeconds * (width / 100));
+                const minutes = Math.floor(currentSeconds / 60);
+                const seconds = currentSeconds % 60;
+                currentTimeEl.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                
+                if (width === 0.5) {
+                    durationEl.textContent = '4:00';
+                }
+            }, 100);
+        }
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create email content
-            const emailBody = `
-                New Contact Form Submission from PROTECTOR Designs Website:
-                
-                Name: ${name}
-                Email: ${email}
-                Message: ${message}
-                
-                This message was sent from the PROTECTOR Designs contact form.
-            `;
-            
-            // Create mailto link
-            const mailtoLink = `mailto:hello@protectordesigns.com?subject=New Contact Form&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Reset form
+            alert('Thank you for your message! Enockie will get back to you soon.');
             this.reset();
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+
+        // Admin Dashboard Functionality
+        const adminSection = document.getElementById('admin-section');
+        const loginModal = document.getElementById('login-modal');
+        const adminLoginBtn = document.getElementById('admin-login');
+        const closeLoginBtn = document.getElementById('close-login');
+        const loginForm = document.getElementById('login-form');
+        const logoutBtn = document.getElementById('logout-btn');
+        const adminNavBtns = document.querySelectorAll('.admin-nav-btn');
+        const adminPanels = document.querySelectorAll('.admin-panel');
+
+        // Show login modal
+        adminLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+        });
+
+        // Close login modal
+        closeLoginBtn.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+
+        // Login form submission
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
             
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
-        });
-
-        // Back to top functionality
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isActive = question.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-question').forEach(q => {
-                    q.classList.remove('active');
+            // Simple authentication (in a real app, this would be server-side)
+            if (username === 'admin' && password === 'password') {
+                // Hide main content and show admin dashboard
+                document.querySelectorAll('section, footer').forEach(el => {
+                    el.style.display = 'none';
                 });
-                document.querySelectorAll('.faq-answer').forEach(a => {
-                    a.classList.remove('active');
-                });
+                adminSection.style.display = 'block';
+                loginModal.style.display = 'none';
                 
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    question.classList.add('active');
-                    answer.classList.add('active');
-                }
-            });
-        });
-
-        // Portfolio Modal
-        const portfolioModal = document.getElementById('portfolio-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalImage = document.getElementById('modal-image');
-        const modalDescription = document.getElementById('modal-description');
-        const modalClose = document.querySelector('.modal-close');
-
-        // Project data for modals
-        const projectData = {
-            1: {
-                title: "EcoLife Branding",
-                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-                description: "<p>We developed a complete brand identity for EcoLife, an eco-friendly products company based in Kampala. The project included logo design, color palette, typography, and brand guidelines.</p><p>The client wanted a visual identity that communicated sustainability while maintaining a modern and approachable aesthetic. We delivered a system that works across both digital and print media.</p><p><strong>Services:</strong> Logo Design, Brand Identity, Print Design</p>"
-            },
-            2: {
-                title: "TechSolutions Website",
-                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-                description: "<p>We designed and developed a responsive website for TechSolutions, a technology consulting firm. The project focused on creating a user-friendly interface that showcases their services and expertise.</p><p>The design emphasizes clarity and professionalism while incorporating interactive elements to engage visitors. The website has helped increase their lead generation by 35%.</p><p><strong>Services:</strong> Web Design, UI/UX Design, Development</p>"
-            },
-            3: {
-                title: "Food Festival Posters",
-                image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-                description: "<p>We created a vibrant poster series for the annual Kampala Food Festival. The designs needed to appeal to a diverse audience while representing the multicultural nature of the event.</p><p>Using bold colors and dynamic typography, we developed a visual system that worked across various sizes and formats. The posters were displayed throughout the city and contributed to a 20% increase in attendance.</p><p><strong>Services:</strong> Print Design, Illustration, Typography</p>"
-            }
-        };
-
-        // Open modal when portfolio item is clicked
-        document.querySelectorAll('.portfolio-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const projectId = item.getAttribute('data-modal');
-                const project = projectData[projectId];
-                
-                if (project) {
-                    modalTitle.textContent = project.title;
-                    modalImage.style.backgroundImage = `url('${project.image}')`;
-                    modalDescription.innerHTML = project.description;
-                    portfolioModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                }
-            });
-        });
-
-        // Close modal
-        modalClose.addEventListener('click', () => {
-            portfolioModal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        });
-
-        // Close modal when clicking outside content
-        portfolioModal.addEventListener('click', (e) => {
-            if (e.target === portfolioModal) {
-                portfolioModal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        });
-
-        // Dark/Light Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
-        // Check for saved theme preference or respect OS preference
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
+                // Reset form
+                this.reset();
             } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
+                alert('Invalid username or password. Try admin/password');
             }
         });
 
-        // Before/After Slider
-        const comparisonSlider = document.getElementById('comparisonSlider');
-        if (comparisonSlider) {
-            const beforeImage = comparisonSlider.querySelector('.before-image');
-            const sliderHandle = comparisonSlider.querySelector('.slider-handle');
-            let isResizing = false;
-
-            sliderHandle.addEventListener('mousedown', function(e) {
-                isResizing = true;
-                document.addEventListener('mousemove', handleMove);
-                document.addEventListener('mouseup', () => {
-                    isResizing = false;
-                    document.removeEventListener('mousemove', handleMove);
-                });
+        // Logout functionality
+        logoutBtn.addEventListener('click', function() {
+            // Show main content and hide admin dashboard
+            document.querySelectorAll('section, footer').forEach(el => {
+                el.style.display = 'block';
             });
+            adminSection.style.display = 'none';
+        });
 
-            sliderHandle.addEventListener('touchstart', function(e) {
-                isResizing = true;
-                document.addEventListener('touchmove', handleMove);
-                document.addEventListener('touchend', () => {
-                    isResizing = false;
-                    document.removeEventListener('touchmove', handleMove);
-                });
+        // Admin navigation
+        adminNavBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and panels
+                adminNavBtns.forEach(b => b.classList.remove('active'));
+                adminPanels.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding panel
+                const panelId = this.getAttribute('data-panel') + '-panel';
+                document.getElementById(panelId).classList.add('active');
             });
+        });
 
-            function handleMove(e) {
-                if (!isResizing) return;
-                
-                let clientX;
-                if (e.type.includes('touch')) {
-                    clientX = e.touches[0].clientX;
-                } else {
-                    clientX = e.clientX;
-                }
-                
-                const sliderRect = comparisonSlider.getBoundingClientRect();
-                let position = ((clientX - sliderRect.left) / sliderRect.width) * 100;
-                
-                // Constrain between 0 and 100
-                position = Math.max(0, Math.min(100, position));
-                
-                beforeImage.style.width = `${position}%`;
-                sliderHandle.style.left = `${position}%`;
-            }
-        }
+        // Upload form submission
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Song uploaded successfully! (This is a demo - in a real app, the file would be processed)');
+            this.reset();
+        });
 
-        // Custom Cursor
-        const cursorDot = document.querySelector('[data-cursor-dot]');
-        const cursorOutline = document.querySelector('[data-cursor-outline]');
+        // Edit and delete buttons in songs panel
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Edit song functionality would open here');
+            });
+        });
 
-        if (cursorDot && cursorOutline) {
-            window.addEventListener('mousemove', function(e) {
-                const posX = e.clientX;
-                const posY = e.clientY;
-                
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-                
-                // Outline with delay
-                setTimeout(() => {
-                    cursorOutline.style.left = `${posX}px`;
-                    cursorOutline.style.top = `${posY}px`;
-                }, 100);
-                
-                // Interactive elements
-                const interactiveElements = document.querySelectorAll('a, button, .portfolio-item, .service-card');
-                let isInteractive = false;
-                
-                interactiveElements.forEach(el => {
-                    if (el.matches(':hover')) {
-                        isInteractive = true;
-                    }
-                });
-                
-                if (isInteractive) {
-                    cursorDot.style.width = '16px';
-                    cursorDot.style.height = '16px';
-                    cursorOutline.style.width = '60px';
-                    cursorOutline.style.height = '60px';
-                    cursorOutline.style.borderColor = 'var(--accent)';
-                } else {
-                    cursorDot.style.width = '8px';
-                    cursorDot.style.height = '8px';
-                    cursorOutline.style.width = '40px';
-                    cursorOutline.style.height = '40px';
-                    cursorOutline.style.borderColor = 'var(--primary)';
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this song?')) {
+                    alert('Song deleted successfully!');
                 }
             });
-        }
-        
-        // Fixed Feedback System
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load existing feedback from localStorage
-            loadFeedback();
-            
-            // Set up rating stars - SIMPLIFIED VERSION
-            setupRatingStars();
-            
-            // Handle feedback form submission
-            document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                submitFeedback();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('nav ul').style.display = 'none';
+                    }
+                }
             });
         });
+
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
         
-        // Function to set project in feedback form when clicking "Leave Feedback" from project cards
-        function setProject(projectName) {
-            document.getElementById('feedbackProject').value = projectName;
-            // Smooth scroll to feedback section
-            document.getElementById('feedback').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // SIMPLIFIED rating stars setup - This should definitely work
-        function setupRatingStars() {
-            const stars = document.querySelectorAll('.star');
-            const ratingInput = document.getElementById('feedbackRating');
-            
-            // Clear any existing event listeners by cloning and replacing
-            stars.forEach(star => {
-                const newStar = star.cloneNode(true);
-                star.parentNode.replaceChild(newStar, star);
-            });
-            
-            // Get the new stars after replacement
-            const newStars = document.querySelectorAll('.star');
-            
-            newStars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const value = this.getAttribute('data-value');
-                    console.log('Star clicked:', value); // Debug log
-                    ratingInput.value = value;
-                    
-                    // Update star display
-                    newStars.forEach((s, index) => {
-                        if (index < value) {
-                            s.innerHTML = '<i class="fas fa-star"></i>';
-                            s.classList.add('filled');
-                        } else {
-                            s.innerHTML = '<i class="far fa-star"></i>';
-                            s.classList.remove('filled');
-                        }
-                    });
-                    
-                    // Clear any error messages
-                    hideAlert();
-                });
-            });
-            
-            // Add hover effect to the rating container
-            document.getElementById('ratingStars').addEventListener('mouseover', function(e) {
-                if (e.target.classList.contains('star')) {
-                    const value = e.target.getAttribute('data-value');
-                    newStars.forEach((s, index) => {
-                        if (index < value) {
-                            s.innerHTML = '<i class="fas fa-star"></i>';
-                        } else {
-                            s.innerHTML = '<i class="far fa-star"></i>';
-                        }
-                    });
+        const fadeInOnScroll = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
                 }
             });
-            
-            // Reset stars when mouse leaves (unless a rating is selected)
-            document.getElementById('ratingStars').addEventListener('mouseleave', function() {
-                const currentRating = ratingInput.value;
-                newStars.forEach((s, index) => {
-                    if (index < currentRating) {
-                        s.innerHTML = '<i class="fas fa-star"></i>';
-                        s.classList.add('filled');
-                    } else {
-                        s.innerHTML = '<i class="far fa-star"></i>';
-                        s.classList.remove('filled');
-                    }
-                });
-            });
-        }
+        };
         
-        // Fixed submit feedback function
-        function submitFeedback() {
-            const name = document.getElementById('feedbackName').value.trim();
-            const project = document.getElementById('feedbackProject').value;
-            const message = document.getElementById('feedbackMessage').value.trim();
-            const rating = document.getElementById('feedbackRating').value;
-            
-            console.log('Form values:', { name, project, message, rating }); // Debug log
-            
-            // Validate form
-            let errors = [];
-            
-            if (!name) {
-                errors.push('Please enter your name');
-            }
-            
-            if (!project) {
-                errors.push('Please select a project');
-            }
-            
-            if (!message) {
-                errors.push('Please enter your feedback message');
-            }
-            
-            if (rating === '0' || !rating) {
-                errors.push('Please provide a rating by clicking on the stars');
-            }
-            
-            if (errors.length > 0) {
-                showAlert(errors.join('<br>'), 'error');
-                return;
-            }
-            
-            // Create feedback object
-            const feedback = {
-                id: Date.now(), // Use timestamp as unique ID
-                name: name,
-                project: project,
-                message: message,
-                rating: parseInt(rating),
-                date: new Date().toLocaleDateString('en-US', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                })
-            };
-            
-            // Save to localStorage
-            saveFeedback(feedback);
-            
-            // Add to display
-            displayFeedback(feedback);
-            
-            // Show success message
-            showAlert('Thank you for your feedback! It has been submitted successfully.', 'success');
-            
-            // Reset form
-            document.getElementById('feedbackForm').reset();
-            
-            // Reset stars
-            const stars = document.querySelectorAll('.star');
-            stars.forEach(star => {
-                star.innerHTML = '<i class="far fa-star"></i>';
-                star.classList.remove('filled');
-            });
-            document.getElementById('feedbackRating').value = '0';
-        }
-        
-        // Save feedback to localStorage
-        function saveFeedback(feedback) {
-            let feedbacks = JSON.parse(localStorage.getItem('protectorFeedbacks')) || [];
-            feedbacks.push(feedback);
-            localStorage.setItem('protectorFeedbacks', JSON.stringify(feedbacks));
-        }
-        
-        // Load feedback from localStorage
-        function loadFeedback() {
-            const feedbacks = JSON.parse(localStorage.getItem('protectorFeedbacks')) || [];
-            const feedbackList = document.getElementById('feedbackList');
-            const noFeedback = document.getElementById('noFeedback');
-            
-            if (feedbacks.length > 0) {
-                noFeedback.style.display = 'none';
-                
-                // Sort by most recent first
-                feedbacks.sort((a, b) => b.id - a.id);
-                
-                // Clear existing feedback (except no feedback message)
-                const existingFeedback = feedbackList.querySelectorAll('.feedback-item');
-                existingFeedback.forEach(item => item.remove());
-                
-                // Display each feedback
-                feedbacks.forEach(feedback => {
-                    displayFeedback(feedback);
-                });
-            }
-        }
-        
-        // Display a feedback item
-        function displayFeedback(feedback) {
-            const feedbackList = document.getElementById('feedbackList');
-            const noFeedback = document.getElementById('noFeedback');
-            
-            // Hide "no feedback" message if this is the first one
-            if (noFeedback.style.display !== 'none') {
-                noFeedback.style.display = 'none';
-            }
-            
-            // Create feedback element
-            const feedbackItem = document.createElement('div');
-            feedbackItem.className = 'feedback-item';
-            feedbackItem.innerHTML = `
-                <div class="feedback-header">
-                    <div>
-                        <div class="feedback-author">${feedback.name}</div>
-                        <div class="feedback-date">${feedback.date}</div>
-                    </div>
-                    <div class="feedback-project">${feedback.project}</div>
-                </div>
-                <div class="rating">
-                    ${generateStarRating(feedback.rating)}
-                </div>
-                <div class="feedback-content">${feedback.message}</div>
-            `;
-            
-            // Add to the beginning of the list (most recent first)
-            feedbackList.insertBefore(feedbackItem, feedbackList.firstChild);
-        }
-        
-        // Generate star rating HTML
-        function generateStarRating(rating) {
-            let stars = '';
-            for (let i = 1; i <= 5; i++) {
-                if (i <= rating) {
-                    stars += '<span class="star filled"><i class="fas fa-star"></i></span>';
-                } else {
-                    stars += '<span class="star"><i class="far fa-star"></i></span>';
-                }
-            }
-            return stars;
-        }
-        
-        // Show alert message
-        function showAlert(message, type) {
-            const alertDiv = document.getElementById('feedbackAlert');
-            alertDiv.innerHTML = message;
-            alertDiv.className = `alert alert-${type}`;
-            alertDiv.style.display = 'block';
-            
-            // Scroll to alert
-            alertDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Hide alert after 5 seconds
-            setTimeout(() => {
-                hideAlert();
-            }, 5000);
-        }
-        
-        // Hide alert message
-        function hideAlert() {
-            const alertDiv = document.getElementById('feedbackAlert');
-            alertDiv.style.display = 'none';
-        }
+        window.addEventListener('scroll', fadeInOnScroll);
+        // Initial check
+        fadeInOnScroll();
     </script>
 </body>
 </html>
